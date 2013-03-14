@@ -2,4 +2,5 @@
 
 = In date order, newest first =
 
-2013.03.14 The code is beta-ish (as I have test flown it), the rest is alpha-ish, PERL script included.
+2013.03.14 The code is beta-ish (as I have test flown it), the rest is alpha-ish, PERL script included. 
+It currently has been test flown with both a [http://www.jperkinsdistribution.co.uk/detail.php?JPNO=6600034&activepage=1&Navmain=Helicopters&subcatname=RTF/RC%20ready%20-%20Twister%20helis JP twister quad] and a Hubsan X4, both seem to work OK.
