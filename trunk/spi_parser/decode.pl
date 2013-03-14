@@ -17,7 +17,7 @@
 # http://code.google.com/p/rc-ppm-2-spi/
  
 
-$LOGFILE = "test_1.txt";
+$LOGFILE = "nanostick_spi_frag.csv";
 open(LOGFILE) or die("Could not open log file.");
 $packet_no_last="0";
 $packet_no="0";
