@@ -1,6 +1,6 @@
 #summary What's ToDo
 
-  * Finalize PCB design, some people want extra range using the module listed as "A7105-500m" on eBay, AliExpress etc
+  * Finalize PCB design, some people want extra range using the module listed as "A7105-500m" on eBay, !AliExpress etc
 
   * Not sure what to do about selecting a protocol, options are:
     * A dip switch
