@@ -7,4 +7,16 @@
     * Reading a channels output
     * Flashing it as you see fit
 
+  * Upload BOM
+
+  * Further testing of the PERL SPI script
+
+  * Get the PCB produced
+
+  * Assemble and test a PCB
+
+  * Distribute the PCB's 
+
+
+
  
