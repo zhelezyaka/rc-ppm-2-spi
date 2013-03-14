@@ -1,0 +1,5 @@
+#summary Current State of the Project
+
+= In date order, newest first =
+
+2013.03.14 The code is beta-ish (as I have test flown it), the rest is alpha-ish, PERL script included.
