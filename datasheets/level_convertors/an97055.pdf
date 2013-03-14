@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Window-target" content="_top" />
+	<meta http-equiv="Content-Language" content="" />
+	<meta http-equiv="distribution" content="Global" />
+	<meta name="technology" content="TriMM Interactive Media, www.TriMM.nl" />
+	<meta name="robots" content="" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="philips.pipid" content="" />
+	<title>The page you requested is not available.</title>
+	<script type="text/javascript">
+		function getTime() { var theTime = new Date(); return theTime; }
+		var startTime = getTime();
+	</script>
+	<link rel="stylesheet" type="text/css" href="/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="/css/components.css" />
+	<link rel="stylesheet" type="text/css" href="/css/components-additional.css" />
+	<link rel="stylesheet" type="text/css" href="/crsc/additional/additional.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/locale/css/locale.css" />
+	<link rel="stylesheet" type="text/css" href="/javascript/libraries/shadowbox/shadowbox.css" media="screen" />
+	<script type="text/javascript" src="/javascript/general.js"></script>
+	<script type="text/javascript" src="/locale/includes/texts.js"></script>
+	<script type="text/javascript" src="/bbjavascript/bookmarkBar.js"></script>
+        
+	<style type="text/css">
+		html,body{height:100%;margin:0px;padding:0px;}
+	</style>
+	<!--[if lte IE 6]>
+		<link rel="stylesheet" type="text/css" href="/css/ie6.css" />
+	<![endif]-->
+	
+</head>
+<!-- virtual included /www/www.nxp.com/en.docs//general/includes/header.html -->
+	<body>
+		<script type="text/javascript">
+			_page.dmCatId = ''
+			_page.pageId = ''
+			var sOmniturePageType = '404';
+			bcData = [];
+		</script>
+		<div class="layout_container">
+			<div class="layout_header">
+	<div class="layout_header_left">
+		<a href="/" title="NXP Semiconductors homepage" name="top"><img src="/bbimages/NXP_logo.gif" alt="NXP Semiconductors logo" /></a>
+	</div>
+	<div class="layout_header_right">
+		
+<!DOCTYPE div
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<div class="TM-main">
+	<div class="TM-base">
+		<div class="TM-item"><a href="http://www.nxp.com">Home</a></div>
+		<div class="TM-seperator"><span></span></div>
+		<div class="TM-item"><a href="http://www.nxp.com/about.html">About NXP</a></div>
+		<div class="TM-seperator"><span></span></div>
+		<div class="TM-item"><a href="http://www.nxp.com/news.html">News</a></div>
+		<div class="TM-seperator"><span></span></div>
+		<div class="TM-item"><a href="http://www.nxp.com/careers.html">Careers</a></div>
+		<div class="TM-seperator"><span></span></div>
+		<div class="TM-item"><a href="http://investors.nxp.com">Investors</a></div>
+		<div class="TM-seperator"><span></span></div>
+		<div class="TM-item"><a href="http://www.nxp.com/technical-support-portal">Tech support</a></div>
+		<div class="TM-seperator"><span></span></div>
+		<div class="TM-item"><a href="/techsupport/">Contact</a></div>
+		<div class="TM-seperator"><span></span></div>
+		<div class="TM-item"><a href="/my/">my.NXP</a></div>
+	</div>
+</div><!-- virtual included /www/www.nxp.com/en.docs//locale/includes/topMenu.html -->
+	</div>
+	<div class="layout_column_right">
+		<!-- "/locale/includes/languagePanel.html" -->
+		<!-- "/locale/includes/searchPanel.html" -->
+	</div>
+</div><!-- virtual included /www/www.nxp.com/en.docs//general/includes/layout_header.html -->
+			<div class="layout_body">
+				<div id="app_main" class="layout_body_sub">
+					<div class="layout_body_spacekeeper"><span /></div>
+					<div id="nxp_application">						
+						
+<!DOCTYPE div
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<div xmlns="http://www.w3.org/1999/xhtml" class="BCB BCB-detailed">
+	<div class="BCBS BCBS-base BCBS-other" role="section">
+		<div class="BCBS-main" id="bcs">
+			<div class="firstchild" role="content">
+				<span><a href="http://www.nxp.com">Home</a></span>
+			</div>
+		</div>
+	</div>
+	<div class="BCBS BCBS-base_sub BCBS-product" role="section">
+		<div class="BCBS-main">
+			<div class="firstchild" role="content">
+				<span><a href="http://www.nxp.com">Products</a></span>
+			</div>
+		</div>
+	</div>
+	<div class="BCBS BCBS-base_sub BCBS-application" role="section">
+		<div class="BCBS-main">
+			<div class="firstchild" role="content">
+				<span><a href="http://www.nxp.com">Applications</a></span>
+			</div>
+		</div>
+	</div>
+</div><!-- virtual included /www/www.nxp.com/en.docs//locale/includes/breadcrumbBar.html -->
+						<div class="H-base other">
+							<div class="H-main">
+								<div class="H-firstChild">
+									<span class="title">The page you requested is not available.</span>
+								</div>
+							</div>
+						</div>
+						<div class="DP-base">
+							<div class="DP-content">
+								<div class="mpi">
+									<div class="columnright">
+										<span id="myAltBlockHTML"></span>	
+									</div>
+									<div class="section">
+										<div class="content">
+<!-- START MAIN CONTENT HERE -->					
+											<div class="p-404">
+												<h1>Page Not Found</h1>
+
+<p>We are sorry, but the page you requested cannot be found. The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+<br />
+<p>&#149; If you typed the page address in the Address bar, make sure that it is spelled correctly.</p>
+<p>&#149; If you came from another page on NXP website, you can click the Back button to return to the previous page.</p>
+<p>&#149; To speak with an NXP representative, please <a href="/support/">contact NXP</a> or visit our comprehensive <a href="/technical_support/">Technical support section</a>.</p>
+<br />
+<p>&#149; If you were looking for something specific, you could try searching for it here:</p>
+<br />
+<form method="get" action="/search/" name="result" id="searchForm">
+ 	<input type="hidden" value="en" name="lang"/>
+ 	<input type="hidden" value="" name="collections"/>
+	<input type="text" size="60" name="query" style="border-color:#959595 #D5D5D5 #D5D5D5 #959595;border-style:solid;border-width:1px;color:#666666;float:left;font-size:11px;margin:0px 0 0 10px;padding:2px 3px;width:150px" id="searchquery"/>
+	<!--input class="p-locale-submit" type="image" src="/crsc/images/but_go.gif" /-->
+	<div class="B-base" style="float:left; padding: 0px 3px 5px 5px;">
+		<div class="B-main">
+			<div class="B-firstChild"><span onclick="document.forms.searchForm.submit();">Search</span></div>
+		</div>
+	</div>
+</form>	
+<br /><br />
+
+											</div>
+<!-- END MAIN CONTENT HERE -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+<!DOCTYPE div
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<div class="layout_footer">
+	<div id="footer-links" class="links">
+		<a href="http://www.nxp.com/site-owner.html">NXP</a> |
+		<a href="http://www.nxp.com/privacy-policy.html" rel="nofollow">Privacy policy</a> |
+		<a href="http://www.nxp.com/terms-of-use.html" rel="nofollow">Terms of use</a> |
+		<a href="http://www.nxp.com/news/mobile-app.html">Mobile app</a>
+	</div>
+	<div class="copyright">
+		©2006-2011 NXP Semiconductors. All rights reserved. <span><span>沪ICP备1020807</span></span>
+	</div>
+</div><!-- virtual included /www/www.nxp.com/en.docs//locale/includes/footer.html -->
+			</div>
+		</div>
+		<script type="text/javascript" src="/bbjavascript/bdetect.js"></script>		
+<script type="text/javascript" src="/bbjavascript/mpibreadcrumb.js"></script>
+<script language="javascript">
+	bc = new Breadcrumb(document.getElementById('bcs').getElementsByTagName('div')[0], true);
+</script>
+<script type="text/javascript" src="/bbjavascript/fbmanager.js"></script>
+<script type="text/javascript">fbm = new FallbackManager(false, false);</script>
+<script type="text/javascript" src="/javascript/en/scenarios.js"></script>
+<script type="text/javascript" src="/javascript/taxonomy.js"></script>
+
+<script type="text/javascript" src="/javascript/libraries/shadowbox/shadowbox.js"></script>
+<script type="text/javascript" src="/javascript/shadowbox-scripts.js"></script>
+<!-- virtual included /www/www.nxp.com/en.docs//general/includes/footer_scripts_mpi.html -->
+				<script type="text/javascript" src="/javascript/elqNow/elqCfg.js"></script>
+		<script type="text/javascript" src="/javascript/elqNow/elqImg.js"></script>
+		<script type="text/javascript" src="/javascript/urchin.js"></script>
+		<script type="text/javascript" src="http://nxp.taggingserver.netmining.com/"></script>
+		<script type="text/javascript">
+			_uacct="UA-352656-6";_udn = "none"; _uOsr[20]="Inquiro"; _uOsr[21]="search.live.com"; _uOkw[20]="query"; _uOkw[21]="q"; _uOsr[7]="Baidu"; _uOkw[7]="wd"; _utimeout="600";_ulink=1; urchinTracker();addLinkerEvents();
+		</script>
+		<script type="text/javascript" src="/javascript/s_code.js"></script>
+		<script type="text/javascript">
+			var tempPage = location.href.replace("http://","");
+					tempPage = tempPage.substring(tempPage.indexOf("/"));
+					s.pageName = tempPage;
+					
+					var currentPath = location.pathname.substring( 1 );
+					var firstPath = currentPath.substring( 0, currentPath.indexOf("/") );
+					
+					var mpiPages = new Array("news", 
+											 "models", 
+											 "profile", 
+											 "country",
+											 "my",
+											 "jobs",
+											 "products",
+											 "sitemap",
+											 "packings",
+											 "package",
+											 "applications");
+					
+					for( var iMpi = 0; iMpi < mpiPages.length; iMpi++ ){
+						if( firstPath == mpiPages[iMpi] ){
+							if (typeof oOmnitureProperties !='object'){
+								var oOmnitureProperties = {};
+								oOmnitureProperties.products = "";
+								var sOmnitureEvents = "prodView";
+							}
+						}
+					}
+					
+					if( typeof oOmnitureProperties == 'object' ) {
+						if( !oOmnitureProperties.channel ) {
+							if(typeof bcData == 'object') {
+								if (bcData[0][1]!=''){
+									s.channel = bcData[0][1];
+								} else {
+									s.channel = "MPI page";
+								}
+							} else {
+								s.channel = "MPI page";
+							}
+						}
+							
+						if (typeof sOmnitureEvents != "undefined" && sOmnitureEvents != "" ) {
+							s.linkTrackEvents = sOmnitureEvents;
+							s.events = sOmnitureEvents;
+							sOmnitureEvents = "";
+						}
+						if (typeof oOmnitureProperties !='object') {
+							var oOmnitureProperties = {};
+						}
+							
+						for (var sVal in oOmnitureProperties) {
+							s[sVal] = oOmnitureProperties[sVal];
+						}
+						oOmnitureProperties = null;
+					
+					} else {
+						if(typeof _page != "undefined" && (_page.dpiDocId != "" || _page.pageId != "")){
+							if (typeof _page.dpiDocId != 'undefined') {
+								s.products = ';' + _page.dpiDocId;
+							} else {
+								s.products = ';' + _page.pageId;
+							}
+							//s.linkTrackEvents = "event1,prodView";
+							//s.events = "event1,prodView";
+						}
+						s.channel = "classic";
+					}
+						
+					var s_code=s.t();if(s_code)document.write(s_code);
+
+		</script>
+<!-- virtual included /www/www.nxp.com/en.docs//general/includes/footer_scripts.html -->
+	</body>
+</html>

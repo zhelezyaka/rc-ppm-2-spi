@@ -1,0 +1,17 @@
+EESchema-LIBRARY Version 2.3  Date: 11/03/2013 16:43:26
+#encoding utf-8
+#
+# HOLE_M3
+#
+DEF HOLE_M3 H 0 40 Y N 1 F N
+F0 "H" -250 -100 60 H V C CNN
+F1 "HOLE_M3" -100 -200 60 H V C CNN
+$FPLIST
+ 1H*
+$ENDFPLIST
+DRAW
+X ~ 1 150 -150 300 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library
