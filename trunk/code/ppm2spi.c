@@ -84,11 +84,19 @@ while (g_sync_count <= 12) ;  //wait untill valid PPM signal
 TCCR1B &= ~(1<<ICNC1);
 
 if (BIND_SW_READ())
+#ifdef FLYSKY
 	FLYSKY_Cmds(PROTOCMD_INIT);
-	//HUBSAN_Cmds(PROTOCMD_INIT);
+#endif
+#ifdef HUBSAN
+	HUBSAN_Cmds(PROTOCMD_INIT);
+#endif
 else
+#ifdef FLYSKY
 	FLYSKY_Cmds(PROTOCMD_BIND);
-	//HUBSAN_Cmds(PROTOCMD_BIND);
+#endif
+#ifdef HUBSAN
+	HUBSAN_Cmds(PROTOCMD_BIND);
+#endif
 
 while (g_initializing) ; //wait until initialization has occured before re-enabling the PPM interrupt
 
