@@ -17,7 +17,7 @@
 # http://code.google.com/p/rc-ppm-2-spi/
  
 
-$LOGFILE = "nanostick_spi_frag.csv";
+$LOGFILE = "nanostick_spi.csv";
 open(LOGFILE) or die("Could not open log file.");
 $packet_no_last="0";
 $packet_no="0";
@@ -26,9 +26,9 @@ $time_last=0;
 $i = 0;
 $j = 0;
 $line_no = 0;
+$rssi_mute = 0;
 $frame_delay = (0.23/1000); #milliseconds
-@packet;
-@decoded_packet;
+
 
 
 foreach $line (<LOGFILE>)
@@ -57,22 +57,42 @@ foreach $line (<LOGFILE>)
 			}
 		# print the decoded packet
 
-		if ($k==1) {print strobe_eval($decoded_packet[0]), " ";}
+		if ($k==1 && $rssi_mute==0) {print strobe_eval($decoded_packet[0]), " ";}
 		#if ($k==1) {$temp=1;}
 
 		else
 			{
-			print command_eval($decoded_packet[0]), " ";
-			for ($j=1; $j<$k; $j++)
+			
+			if ($rssi_count && ($decoded_packet[0] ne "5D"))
 				{
-				print $decoded_packet[$j], " ";
+				print "RSSI = ".($rssi/$rssi_count)."\n";
+				$rssi=0;
+				$rssi_count=0;
+				$rssi_mute=0;
+				}
+				
+			if ($decoded_packet[0] eq "5D")
+				{
+				$rssi += hex($decoded_packet[1]);
+				$rssi_count++;
+				$rssi_mute=1;
+				}
+			if ($rssi_mute==0)
+				{
+				print command_eval($decoded_packet[0]), " ";
+				for ($j=1; $j<$k; $j++)
+					{
+					print $decoded_packet[$j], " ";
+					}
 				}
 			}
-
-		print "\n";
+		if ($rssi_mute==0) {print "\n";}
 
 		$i=0;
-		if (($time - $time_last) > $frame_delay) {print "\n";}
+		if ($rssi_mute==0)
+			{
+			if (($time - $time_last) > $frame_delay) {print "\n";}
+			}
 		}
 
 	$time_last = $time;
