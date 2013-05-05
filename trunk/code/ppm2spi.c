@@ -22,9 +22,6 @@
 #include <stdlib.h>
 #include <avr/interrupt.h>
 #include <avr/pgmspace.h>
-//#include "../../../../incs/uart.h"
-
-
 
 #define BAUD 38400
 #define NEUTRAL 0
@@ -45,32 +42,34 @@ volatile s16 Channels[NUM_OUT_CHANNELS];
 int main (void)
 {
 
-//char buffer[10];
-//uart_init(UART_BAUD_SELECT((BAUD),F_CPU),TX_ONLY);
-
 Model.fixed_id = 0x00102030;
 Model.num_channels = 8;
 Model.tx_power = TXPOWER_100mW ;
 
-gpio_set(DEBUG_DDR, DEBUG_ICR);
-gpio_set(DEBUG_DDR, DEBUG_PACKET);
-gpio_clear(DEBUG_DDR, PPM_IN); 
+gpio_set   (DEBUG_DDR, DEBUG_1); // Output
+gpio_set   (DEBUG_DDR, DEBUG_2); // Output
+gpio_clear (DEBUG_DDR, PPM_IN);  // Input
 
-gpio_clear(SPI_DDR, BIND_SW);
-gpio_set(SPI_PORT, BIND_SW);
+gpio_clear (SPI_DDR, BIND_SW);   // Input
+gpio_set   (SPI_PORT, BIND_SW);  // Pull up resistor on
+
+
+gpio_set   (DDRB,3);     // MOSI output 
+gpio_clear (DDRB,4);     // MISO input
+gpio_set   (DDRB,5);     // SCK output
+gpio_set   (DDRB,2);     // SS output - General purpose output pin, used by DEBUG_PACKET
+
 
 // SPI Setup
 //No interrupts SPIE=0 , SPI Enable SPE=1, MSB first DORD=0, Master mode MSTR =1
 //Clock polarity, idle low CPOL=0, Sample leading edge CPHA=0, 16/fosc SPR1=0 SPR0=1
 SPCR = (1<<SPE) | (1<<MSTR) | (1<<SPR0);
 
-DDRB |=  (1<<3);     // MOSI output 
-DDRB &= ~(1<<4);     // MISO input
-DDRB |=  (1<<5);     // SCK output
-DDRB |=  (1<<2);     // SS output - General purpose output pin, used by DEBUG_PACKET
+
 
 
 // SPI INIT Bidirectional one wire mode, set to output
+/* Bit bang SPI, to delete
 DATA_BI_OUT();
 DATA_BI_LO();
 DATA_PD_LOW();
@@ -78,6 +77,7 @@ CLK_OUT();
 CLK_LO();
 CS_OUT();
 CS_HI();
+*/
 
 // Set up for input capture on PD6
 // Normal mode, OVF @ TOP (0xFFFF), F_CPU/8, noice cancler on ICP, falling edge trigger
@@ -117,7 +117,6 @@ g_need_to_sync = 1;
 g_icr1_previous = ICR1;
 TCCR1B |= (1<<ICNC1);
 
-//uart_puts_p(PSTR("Hello World\r\n"));
 while (1) ;
 
 }
@@ -130,7 +129,7 @@ while (1) ;
 ISR(TIMER1_CAPT_vect)
 {
 //each timer tick is half a microsecond
-gpio_set(DEBUG_PORT, DEBUG_ICR);
+gpio_set(DEBUG_PORT, DEBUG_1); //High
 static uint16_t icr1_current; //static for debug
 static int16_t icr1_diff;     //static for debug
 
@@ -164,6 +163,6 @@ else
    	g_need_to_sync = 0;
 	}
 
-gpio_clear(DEBUG_PORT, DEBUG_ICR);
+gpio_clear(DEBUG_PORT, DEBUG_1); //Low
 }
 

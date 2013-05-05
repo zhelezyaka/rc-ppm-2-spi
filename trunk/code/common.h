@@ -89,26 +89,28 @@ extern volatile s16 Channels[NUM_OUT_CHANNELS];
 #define gpio_set(sfr,bit) (sfr) |=   1<<(bit)
 #define gpio_clear(sfr,bit) (sfr) &= ~(1<<(bit))
 
-#define SPI_PORT	PORTC
-#define SPI_DDR     DDRC
-#define SPI_PIN		PINC
-#define SPI_DIO_PD		0
-#define SPI_DIO			1
-#define SPI_CLK			2
+#define SPI_PORT	    PORTC
+#define SPI_DDR         DDRC
+#define SPI_PIN		    PINC
 #define SPI_CS			3
-#define SPI_DO      	4
 #define	BIND_SW			5
 
 #define DEBUG_PORT		PORTB
 #define DEBUG_DDR     	DDRB
 #define DEBUG_PIN		PINB
 #define PPM_IN			0
-#define DEBUG_ICR		1
-#define DEBUG_PACKET	2
+#define DEBUG_1		    1
+#define DEBUG_2     	2
 
 #define CS_HI() 		gpio_set(SPI_PORT, SPI_CS)
 #define CS_LO() 		gpio_clear(SPI_PORT, SPI_CS) 
+
+/* Bit bang SPI, to delete
 #define CS_OUT()    	gpio_set(SPI_DDR, SPI_CS)
+#define SPI_DIO_PD		0
+#define SPI_DIO			1
+#define SPI_CLK			2
+#define SPI_DO      	4
 
 #define CLK_HI() 		gpio_set(SPI_PORT, SPI_CLK) 
 #define CLK_LO() 		gpio_clear(SPI_PORT, SPI_CLK)
@@ -126,6 +128,7 @@ extern volatile s16 Channels[NUM_OUT_CHANNELS];
 #define DATA_DO_HI()	gpio_set(SPI_PORT, SPI_DO)
 #define DATA_DO_LO()	gpio_clear(SPI_PORT, SPI_DO)
 #define DATA_DO_OUT()	gpio_set(SPI_DDR, SPI_DO)
+*/
 
 #define BIND_SW_READ() 	(SPI_PIN & (1<<BIND_SW))
 
