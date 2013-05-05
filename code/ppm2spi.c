@@ -50,6 +50,7 @@ int main (void)
 
 Model.fixed_id = 0x00102030;
 Model.num_channels = 8;
+Model.tx_power = TXPOWER_100mW ;
 
 gpio_set(DEBUG_DDR, DEBUG_ICR);
 gpio_set(DEBUG_DDR, DEBUG_PACKET);

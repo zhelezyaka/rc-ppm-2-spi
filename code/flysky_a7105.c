@@ -187,8 +187,8 @@ static u16 flysky_cb()
         flysky_build_packet(0);
         A7105_WriteData(packet, 21, tx_channels[chanrow][chancol]-chanoffset);
         chancol = (chancol + 1) % 16;
-        //if (! chancol) //Keep transmit power updated     // ******** Remove 0xFF
-           // A7105_SetPower(Model.tx_power);               // ******** Remove 0xFF
+        if (! chancol) //Keep transmit power updated  
+           A7105_SetPower(Model.tx_power);  
     }
 
 	gpio_clear(DEBUG_PORT, DEBUG_PACKET);
