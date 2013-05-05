@@ -45,8 +45,7 @@ volatile s16 Channels[NUM_OUT_CHANNELS];
 int main (void)
 {
 
-char buffer[10];
-
+//char buffer[10];
 //uart_init(UART_BAUD_SELECT((BAUD),F_CPU),TX_ONLY);
 
 Model.fixed_id = 0x00102030;
@@ -59,6 +58,17 @@ gpio_clear(DEBUG_DDR, PPM_IN);
 gpio_clear(SPI_DDR, BIND_SW);
 gpio_set(SPI_PORT, BIND_SW);
 
+// SPI Setup
+//No interrupts SPIE=0 , SPI Enable SPE=1, MSB first DORD=0, Master mode MSTR =1
+//Clock polarity, idle low CPOL=0, Sample leading edge CPHA=0, 16/fosc SPR1=0 SPR0=1
+SPCR = (1<<SPE) | (1<<MSTR) | (1<<SPR0);
+
+DDRB |=  (1<<3);     // MOSI output 
+DDRB &= ~(1<<4);     // MISO input
+DDRB |=  (1<<5);     // SCK output
+DDRB |=  (1<<2);     // SS output - General purpose output pin, used by DEBUG_PACKET
+
+
 // SPI INIT Bidirectional one wire mode, set to output
 DATA_BI_OUT();
 DATA_BI_LO();
@@ -70,6 +80,7 @@ CS_HI();
 
 // Set up for input capture on PD6
 // Normal mode, OVF @ TOP (0xFFFF), F_CPU/8, noice cancler on ICP, falling edge trigger
+// 2Mhz Tick
 TCCR1B = (1<<ICNC1) | (2<<CS10); // falling edge trigger 
 //TCCR1B = (1<<ICNC1) | (2<<CS10) | (1<<ICES1); //rising edge trigger
 
