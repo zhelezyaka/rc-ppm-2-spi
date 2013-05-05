@@ -175,7 +175,7 @@ static void flysky_build_packet(u8 init)
 static u16 flysky_cb()
 {
 
-	gpio_set(DEBUG_PORT, DEBUG_PACKET);
+	gpio_set(DEBUG_PORT, DEBUG_2); //High
     if (counter) {
         flysky_build_packet(1);
         A7105_WriteData(packet, 21, 1);
@@ -191,7 +191,7 @@ static u16 flysky_cb()
            A7105_SetPower(Model.tx_power);  
     }
 
-	gpio_clear(DEBUG_PORT, DEBUG_PACKET);
+	gpio_clear(DEBUG_PORT, DEBUG_2); //Low
     return 1460;
 }
 
