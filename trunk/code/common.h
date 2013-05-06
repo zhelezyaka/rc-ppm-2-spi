@@ -59,6 +59,12 @@ enum ProtoCmds {
     PROTOCMD_TELEMETRYSTATE,
 };
 
+enum proto_mode {
+    FLYSKY_STD,
+    FLYSKY_MOD,
+    HUBSAN_STD,
+};
+
 struct Model {
     u8 num_channels;
     u32 fixed_id;
@@ -67,6 +73,8 @@ struct Model {
 extern struct Model Model;
 
 extern volatile uint8_t g_initializing;
+
+extern uint8_t proto_mode;
 
 struct Transmitter {
     u8 dummy;
@@ -86,26 +94,36 @@ extern const void *HUBSAN_Cmds(enum ProtoCmds cmd);
 #define CHAN_MIN_VALUE (-100 * CHAN_MULTIPLIER)
 extern volatile s16 Channels[NUM_OUT_CHANNELS];
 
+#define BIND_SW_READ() 	(PINC & (1<<BIND_SW))
+
+#define SPI2 2
+
 #define gpio_set(sfr,bit) (sfr) |=   1<<(bit)
 #define gpio_clear(sfr,bit) (sfr) &= ~(1<<(bit))
 
-#define SPI_PORT	    PORTC
-#define SPI_DDR         DDRC
-#define SPI_PIN		    PINC
+//Port C
 #define SPI_CS			3
 #define	BIND_SW			5
 
-#define DEBUG_PORT		PORTB
-#define DEBUG_DDR     	DDRB
-#define DEBUG_PIN		PINB
+//Port B
 #define PPM_IN			0
 #define DEBUG_1		    1
 #define DEBUG_2     	2
 
-#define CS_HI() 		gpio_set(SPI_PORT, SPI_CS)
-#define CS_LO() 		gpio_clear(SPI_PORT, SPI_CS) 
+#define CS_HI() 		gpio_set(PORTC, SPI_CS)
+#define CS_LO() 		gpio_clear(PORTC, SPI_CS) 
+
+//Port D
+#define LED_G 2  // LED green
+#define LED_R 3  // LED red
+#define LED_Y 4  // LED yellow
+
 
 /* Bit bang SPI, to delete
+#define SPI_PORT	    PORTC
+#define SPI_DDR         DDRC
+#define SPI_PIN		    PINC
+
 #define CS_OUT()    	gpio_set(SPI_DDR, SPI_CS)
 #define SPI_DIO_PD		0
 #define SPI_DIO			1
@@ -130,8 +148,5 @@ extern volatile s16 Channels[NUM_OUT_CHANNELS];
 #define DATA_DO_OUT()	gpio_set(SPI_DDR, SPI_DO)
 */
 
-#define BIND_SW_READ() 	(SPI_PIN & (1<<BIND_SW))
-
-#define SPI2 2
 
 

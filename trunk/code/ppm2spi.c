@@ -25,6 +25,7 @@
 
 #define BAUD 38400
 #define NEUTRAL 0
+#define MARGIN 200 //10us
 
 // ******************************************************************************************
 // ******                        Global Variables                                      ******
@@ -35,10 +36,12 @@ volatile uint8_t g_sync_count = 0;
 volatile uint16_t g_icr1_previous = 0;
 volatile uint8_t g_initializing = 1;
 volatile uint8_t g_need_to_sync = 1;
+uint8_t proto_mode=FLYSKY;
 struct Transmitter Transmitter;
 struct Model Model;
 volatile s16 Channels[NUM_OUT_CHANNELS];
 
+s16 chtemp;
 int main (void)
 {
 
@@ -46,30 +49,29 @@ Model.fixed_id = 0x00102030;
 Model.num_channels = 8;
 Model.tx_power = TXPOWER_100mW ;
 
-gpio_set   (DEBUG_DDR, DEBUG_1); // Output
-gpio_set   (DEBUG_DDR, DEBUG_2); // Output
-gpio_clear (DEBUG_DDR, PPM_IN);  // Input
+PORTB=0;
+gpio_clear (DDRB, PPM_IN);  // Input  pin0
+gpio_set   (DDRB, DEBUG_1); // Output pin1
+gpio_set   (DDRB, DEBUG_2); // Output pin2 (SS output - General purpose output pin)
+gpio_set   (DDRB,3);        // MOSI output 
+gpio_clear (DDRB,4);        // MISO input
+gpio_set   (DDRB,5);        // SCK output
 
-gpio_clear (SPI_DDR, BIND_SW);   // Input
-gpio_set   (SPI_PORT, BIND_SW);  // Pull up resistor on
+PORTC=0;
+gpio_clear (DDRC, BIND_SW);  // Input pin5
+gpio_set   (PORTC,BIND_SW);  // Pull up resistor on pin5
+gpio_set   (DDRC, SPI_CS);   // Output pin3
+
+PORTD=0;
+gpio_clear (DDRD, 0);  // Serial Rx input
+gpio_set   (DDRD, 1);  // Serial Tx output
+gpio_set   (DDRD, LED_G);  // LED green
+gpio_set   (DDRD, LED_R);  // LED red
+gpio_set   (DDRD, LED_Y);  // LED yellow
 
 
-gpio_set   (DDRB,3);     // MOSI output 
-gpio_clear (DDRB,4);     // MISO input
-gpio_set   (DDRB,5);     // SCK output
-gpio_set   (DDRB,2);     // SS output - General purpose output pin, used by DEBUG_PACKET
-
-
-// SPI Setup
-//No interrupts SPIE=0 , SPI Enable SPE=1, MSB first DORD=0, Master mode MSTR =1
-//Clock polarity, idle low CPOL=0, Sample leading edge CPHA=0, 16/fosc SPR1=0 SPR0=1
-SPCR = (1<<SPE) | (1<<MSTR) | (1<<SPR0);
-
-
-
-
-// SPI INIT Bidirectional one wire mode, set to output
 /* Bit bang SPI, to delete
+// SPI INIT Bidirectional one wire mode, set to output
 DATA_BI_OUT();
 DATA_BI_LO();
 DATA_PD_LOW();
@@ -78,6 +80,11 @@ CLK_LO();
 CS_OUT();
 CS_HI();
 */
+
+// SPI Setup
+//No interrupts SPIE=0 , SPI Enable SPE=1, MSB first DORD=0, Master mode MSTR =1
+//Clock polarity, idle low CPOL=0, Sample leading edge CPHA=0, 16/fosc SPR1=0 SPR0=1
+SPCR = (1<<SPE) | (1<<MSTR) | (1<<SPR0);
 
 // Set up for input capture on PD6
 // Normal mode, OVF @ TOP (0xFFFF), F_CPU/8, noice cancler on ICP, falling edge trigger
@@ -90,25 +97,33 @@ TIMSK1 = (1<<ICIE1);
 // Global interrupt enable
 sei();
 
-while (g_sync_count <= 12) ;  //wait untill valid PPM signal
+//Wait until we have received 20 PPM packets.
+//Gives tx output time to start.
+while (g_sync_count <= 20) ;   
 
 // Disable Input Capture
 TCCR1B &= ~(1<<ICNC1);
 
-if (BIND_SW_READ())
-#ifdef FLYSKY
-	FLYSKY_Cmds(PROTOCMD_INIT);
-#endif
-#ifdef HUBSAN
-	HUBSAN_Cmds(PROTOCMD_INIT);
-#endif
-else
-#ifdef FLYSKY
-	FLYSKY_Cmds(PROTOCMD_BIND);
-#endif
-#ifdef HUBSAN
-	HUBSAN_Cmds(PROTOCMD_BIND);
-#endif
+chtemp = Channels[7];
+
+if ( chtemp <= (CHAN_MIN_VALUE+MARGIN))                        
+	{proto_mode=FLYSKY_STD; gpio_set(PORTD,LED_R);}
+if ((chtemp <= (NEUTRAL+MARGIN     )) && (chtemp >= (NEUTRAL-MARGIN    ))) 
+	{proto_mode=FLYSKY_MOD; gpio_set(PORTD,LED_Y);}
+if ( chtemp >= (CHAN_MAX_VALUE-MARGIN))                        
+	{proto_mode=HUBSAN_STD; gpio_set(PORTD,LED_G);}
+
+
+if (proto_mode == HUBSAN_STD) 
+	{HUBSAN_Cmds(PROTOCMD_BIND);}
+
+if (proto_mode <= FLYSKY_MOD)
+	{
+	if (BIND_SW_READ())
+		{FLYSKY_Cmds(PROTOCMD_BIND);}
+	else
+		{FLYSKY_Cmds(PROTOCMD_INIT);}
+	}
 
 while (g_initializing) ; //wait until initialization has occured before re-enabling the PPM interrupt
 
@@ -129,7 +144,7 @@ while (1) ;
 ISR(TIMER1_CAPT_vect)
 {
 //each timer tick is half a microsecond
-gpio_set(DEBUG_PORT, DEBUG_1); //High
+gpio_set(PORTB, DEBUG_1); //High
 static uint16_t icr1_current; //static for debug
 static int16_t icr1_diff;     //static for debug
 
@@ -163,6 +178,6 @@ else
    	g_need_to_sync = 0;
 	}
 
-gpio_clear(DEBUG_PORT, DEBUG_1); //Low
+gpio_clear(PORTB, DEBUG_1); //Low
 }
 
