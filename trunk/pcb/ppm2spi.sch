@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 06/05/2013 21:01:11
+EESchema Schematic File Version 2  date 06/05/2013 21:20:18
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -737,7 +737,7 @@ L 7805 U2
 U 1 1 513DD1A2
 P 8600 2450
 F 0 "U2" H 8750 2254 60  0000 C CNN
-F 1 "MCP1702-3.3v" H 8600 2650 60  0000 C CNN
+F 1 "KF33B-3.3v" H 8600 2650 60  0000 C CNN
 F 2 "" H 8600 2450 60  0001 C CNN
 F 3 "" H 8600 2450 60  0001 C CNN
 	1    8600 2450

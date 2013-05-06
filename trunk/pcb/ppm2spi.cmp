@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-03-19 BZR 4004)-stable date = 06/05/2013 20:03:36
+Cmp-Mod V01 Created by CvPcb (2013-03-19 BZR 4004)-stable date = 06/05/2013 21:22:01
 
 BeginCmp
 TimeStamp = /513DD1BF;
@@ -73,28 +73,28 @@ EndCmp
 BeginCmp
 TimeStamp = /513DD209;
 Reference = D1;
-ValeurCmp = LED;
+ValeurCmp = R-FS;
 IdModule  = LED-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /513DD20C;
 Reference = D2;
-ValeurCmp = LED;
+ValeurCmp = Y-FSM;
 IdModule  = LED-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /513DD20F;
 Reference = D3;
-ValeurCmp = LED;
+ValeurCmp = G-HS;
 IdModule  = LED-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /518798CD;
 Reference = D4;
-ValeurCmp = LED;
+ValeurCmp = O-BIND;
 IdModule  = LED-0805;
 EndCmp
 
@@ -284,7 +284,7 @@ BeginCmp
 TimeStamp = /513DD1A2;
 Reference = U2;
 ValeurCmp = MCP1702-3.3v;
-IdModule  = SOT23_GIO;
+IdModule  = DPAK2_IGO;
 EndCmp
 
 BeginCmp
