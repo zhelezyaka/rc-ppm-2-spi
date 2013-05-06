@@ -99,7 +99,7 @@ static void flysky_init()
     //IF Filter Bank Calibration
     A7105_WriteReg(0x02, 1);
     A7105_ReadReg(0x02);
-    while(A7105_ReadReg(0x02)) // ******** Remove 0xFF
+    while(A7105_ReadReg(0x02))
         ;
     if_calibration1 = A7105_ReadReg(0x22);
     if(if_calibration1 & A7105_MASK_FBCF) {
@@ -117,7 +117,7 @@ static void flysky_init()
     A7105_WriteReg(0x0f, 0); //Should we choose a different channel?
     //VCO Calibration
     A7105_WriteReg(0x02, 2);
-    while(A7105_ReadReg(0x02)) // ******** Remove 0xFF
+    while(A7105_ReadReg(0x02))
         ;
     vco_calibration0 = A7105_ReadReg(0x25);
     if (vco_calibration0 & A7105_MASK_VBCF) {
@@ -129,7 +129,7 @@ static void flysky_init()
     A7105_WriteReg(0x0f, 0xa0); //Should we choose a different channel?
     //VCO Calibration
     A7105_WriteReg(0x02, 2);
-    while(A7105_ReadReg(0x02)) // ******** Remove 0xFF
+    while(A7105_ReadReg(0x02))
         ;
     vco_calibration1 = A7105_ReadReg(0x25);
     if (vco_calibration1 & A7105_MASK_VBCF) {
