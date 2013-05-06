@@ -168,14 +168,23 @@ static void flysky_build_packet(u8 init)
         packet[6 + i*2] = (value >> 8) & 0xff;
     }
 
-	if (Channels[4] > 3000) packet[12] |= 0x30;  //Edit by Cam - The quadcopter mod
+	if (proto_mode == FLYSKY_MOD) {
+        if(Channels[4] > 0)
+            packet[12] |= 0x20;
+        if(Channels[5] > 0)
+            packet[10] |= 0x40;
+        if(Channels[6] > 0)
+            packet[10] |= 0x80;
+    }
+
+	//if (Channels[4] > 3000) packet[12] |= 0x30;  //Edit by Cam - The quadcopter mod
 }
 
 //MODULE_CALLTYPE   //Edit by cam - Commented out
 static u16 flysky_cb()
 {
 
-	gpio_set(DEBUG_PORT, DEBUG_2); //High
+	gpio_set(PORTB, DEBUG_2); //High
     if (counter) {
         flysky_build_packet(1);
         A7105_WriteData(packet, 21, 1);
@@ -191,7 +200,7 @@ static u16 flysky_cb()
            A7105_SetPower(Model.tx_power);  
     }
 
-	gpio_clear(DEBUG_PORT, DEBUG_2); //Low
+	gpio_clear(PORTB, DEBUG_2); //Low
     return 1460;
 }
 
