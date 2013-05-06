@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "Z:/Dev/Micro_Avr/model - jp twister quad tx/rc-ppm-2-spi/trunk/pcb/ppm2spi.sch")
-    (date "06/05/2013 21:01:14")
+    (date "06/05/2013 21:25:34")
     (tool "eeschema (2013-03-19 BZR 4004)-stable"))
   (components
     (comp (ref P5)
@@ -175,7 +175,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 513DD1A7))
     (comp (ref U2)
-      (value MCP1702-3.3v)
+      (value KF33B-3.3v)
       (libsource (lib regul) (part 7805))
       (sheetpath (names /) (tstamps /))
       (tstamp 513DD1A2))
