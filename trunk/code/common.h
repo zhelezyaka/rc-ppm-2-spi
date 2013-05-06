@@ -117,6 +117,7 @@ extern volatile s16 Channels[NUM_OUT_CHANNELS];
 #define LED_G 2  // LED green
 #define LED_R 3  // LED red
 #define LED_Y 4  // LED yellow
+#define LED_O 5  // LED yellow
 
 
 /* Bit bang SPI, to delete

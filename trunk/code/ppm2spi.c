@@ -23,7 +23,6 @@
 #include <avr/interrupt.h>
 #include <avr/pgmspace.h>
 
-#define BAUD 38400
 #define NEUTRAL 0
 #define MARGIN 200 //10us
 
@@ -68,6 +67,7 @@ gpio_set   (DDRD, 1);  // Serial Tx output
 gpio_set   (DDRD, LED_G);  // LED green
 gpio_set   (DDRD, LED_R);  // LED red
 gpio_set   (DDRD, LED_Y);  // LED yellow
+gpio_set   (DDRD, LED_O);  // LED yellow
 
 
 /* Bit bang SPI, to delete
@@ -115,17 +115,18 @@ if ( chtemp >= (CHAN_MAX_VALUE-MARGIN))
 
 
 if (proto_mode == HUBSAN_STD) 
-	{HUBSAN_Cmds(PROTOCMD_BIND);}
+	{HUBSAN_Cmds(PROTOCMD_BIND); gpio_set(PORTD,LED_O);}
 
 if (proto_mode <= FLYSKY_MOD)
 	{
 	if (BIND_SW_READ())
-		{FLYSKY_Cmds(PROTOCMD_BIND);}
+		{FLYSKY_Cmds(PROTOCMD_BIND);  gpio_set(PORTD,LED_O);}
 	else
 		{FLYSKY_Cmds(PROTOCMD_INIT);}
 	}
 
 while (g_initializing) ; //wait until initialization has occured before re-enabling the PPM interrupt
+gpio_clear(PORTD,LED_O);
 
 // Enable Input Capture
 g_need_to_sync = 1;

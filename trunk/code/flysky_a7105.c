@@ -169,12 +169,13 @@ static void flysky_build_packet(u8 init)
     }
 
 	if (proto_mode == FLYSKY_MOD) {
-        if(Channels[4] > 0)
-            packet[12] |= 0x20;
-        if(Channels[5] > 0)
-            packet[10] |= 0x40;
-        if(Channels[6] > 0)
-            packet[10] |= 0x80;
+		// On threshold set as 400 = 1500us + 20us, so 20us above centre
+        if(Channels[4] > 400)    
+            packet[12] |= 0x20;  // Bit 13 of the rudder channel - JP Twister Quad LEDS
+        if(Channels[5] > 400)
+            packet[10] |= 0x40;  // Bit 14 of the throttle channel will toggle the accessory (video camera)
+        if(Channels[6] > 400)
+            packet[10] |= 0x80;  // Bit 15 of the throttle channel will toggle the accessory (still camera)
     }
 
 	//if (Channels[4] > 3000) packet[12] |= 0x30;  //Edit by Cam - The quadcopter mod
