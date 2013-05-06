@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 06/05/2013 12:51:55
+EESchema Schematic File Version 2  date 06/05/2013 18:39:08
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -1168,4 +1168,19 @@ F 3 "" H 5550 4250 60  0000 C CNN
 $EndComp
 Wire Wire Line
 	4900 4400 5200 4400
+Text Label 5050 3450 0    60   ~ 0
+CS
+Wire Wire Line
+	4900 3450 5200 3450
+$Comp
+L +3.3V #PWR?
+U 1 1 5187EC96
+P 8900 4800
+F 0 "#PWR?" H 8900 4760 30  0001 C CNN
+F 1 "+3.3V" H 8900 4910 30  0000 C CNN
+F 2 "" H 8900 4800 60  0001 C CNN
+F 3 "" H 8900 4800 60  0001 C CNN
+	1    8900 4800
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
