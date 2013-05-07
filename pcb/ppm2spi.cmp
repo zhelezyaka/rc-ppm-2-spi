@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-03-19 BZR 4004)-stable date = 06/05/2013 21:22:01
+Cmp-Mod V01 Created by CvPcb (2013-03-19 BZR 4004)-stable date = 08/05/2013 00:49:05
 
 BeginCmp
 TimeStamp = /513DD1BF;
@@ -141,6 +141,20 @@ IdModule  = JUMPER_2PAD;
 EndCmp
 
 BeginCmp
+TimeStamp = /51898E5C;
+Reference = JP2;
+ValeurCmp = JUMPER;
+IdModule  = JUMPER_2PAD;
+EndCmp
+
+BeginCmp
+TimeStamp = /51899477;
+Reference = K1;
+ValeurCmp = CONN_3;
+IdModule  = PIN_ARRAY_3X1;
+EndCmp
+
+BeginCmp
 TimeStamp = /513DD1E4;
 Reference = P1;
 ValeurCmp = CONN_5;
@@ -180,6 +194,13 @@ TimeStamp = /51879B19;
 Reference = P6;
 ValeurCmp = CONN_4;
 IdModule  = PIN_ARRAY_4x1;
+EndCmp
+
+BeginCmp
+TimeStamp = /51895624;
+Reference = P7;
+ValeurCmp = CONN_2;
+IdModule  = PIN_ARRAY_2X1;
 EndCmp
 
 BeginCmp
@@ -283,7 +304,7 @@ EndCmp
 BeginCmp
 TimeStamp = /513DD1A2;
 Reference = U2;
-ValeurCmp = MCP1702-3.3v;
+ValeurCmp = KF33B-3.3v;
 IdModule  = DPAK2_IGO;
 EndCmp
 
