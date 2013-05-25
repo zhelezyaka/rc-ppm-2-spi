@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-03-19 BZR 4004)-stable date = 08/05/2013 00:49:05
+Cmp-Mod V01 Created by CvPcb (2013-03-19 BZR 4004)-stable date = 25/05/2013 20:09:20
 
 BeginCmp
 TimeStamp = /513DD1BF;
@@ -158,7 +158,7 @@ BeginCmp
 TimeStamp = /513DD1E4;
 Reference = P1;
 ValeurCmp = CONN_5;
-IdModule  = conn_smt_header_5w_0.1;
+IdModule  = molex_kk100_4455_5way;
 EndCmp
 
 BeginCmp
