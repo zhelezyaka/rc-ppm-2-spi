@@ -1,4 +1,4 @@
-PCBNEW-LibModule-V1  06/05/2013 21:21:24
+PCBNEW-LibModule-V1  25/05/2013 20:08:14
 # encoding utf-8
 Units mm
 $INDEX
@@ -13,6 +13,7 @@ conn_smt_header_2x5w_2mm
 conn_smt_header_5w_0.1
 conn_smt_header_6w_2mm
 conn_smt_header_9w_2mm
+molex_kk100_4455_5way
 $EndINDEX
 $MODULE DPAK2_IGO
 Po 0 0 0 15 518810AF 00000000 ~~
@@ -786,4 +787,97 @@ Of 0 0 0
 Ro 0 0 0
 $EndSHAPE3D
 $EndMODULE conn_smt_header_9w_2mm
+$MODULE molex_kk100_4455_5way
+Po 0 0 0 15 51A10BCC 00000000 ~~
+Li molex_kk100_4455_5way
+Sc 0
+AR 
+Op 0 0 0
+T0 -0.1016 -7.0104 1.524 1.524 0 0.3048 N V 21 N "Module_conn"
+T1 0 4.2164 1.524 1.524 0 0.3048 N V 21 N "VAL**"
+DS 5.842 1.1176 6.35 1.1176 0.381 21
+DS 5.842 1.1176 5.842 2.54 0.381 21
+DS -6.35 1.1176 -5.842 1.1176 0.381 21
+DS -5.842 1.1176 -5.842 2.54 0.381 21
+DS -6.35 2.54 -6.35 -5.5372 0.381 21
+DS -6.35 -5.5372 6.35 -5.5372 0.381 21
+DS 6.35 -5.5372 6.35 2.54 0.381 21
+DS 6.35 2.54 -6.35 2.54 0.381 21
+$PAD
+Sh "3" C 1.8 1.8 0 0 0
+Dr 1.1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 0
+$EndPAD
+$PAD
+Sh "4" C 1.8 1.8 0 0 0
+Dr 1.1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 2.54 0
+$EndPAD
+$PAD
+Sh "5" C 1.8 1.8 0 0 0
+Dr 1.1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 5.08 0
+$EndPAD
+$PAD
+Sh "2" C 1.8 1.8 0 0 0
+Dr 1.1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -2.54 0
+$EndPAD
+$PAD
+Sh "1" C 1.8 1.8 0 0 0
+Dr 1.1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -5.08 0
+$EndPAD
+$PAD
+Sh "" C 2 2 0 0 0
+Dr 2 0 0
+At HOLE N 00E0FFFF
+Ne 0 ""
+Po 0 -3.81
+$EndPAD
+$PAD
+Sh "1" C 2 2 0 0 0
+Dr 2 0 0
+At HOLE N 00E0FFFF
+Ne 0 ""
+Po 2.54 -3.81
+$EndPAD
+$PAD
+Sh "2" C 2 2 0 0 0
+Dr 2 0 0
+At HOLE N 00E0FFFF
+Ne 0 ""
+Po 5.08 -3.81
+$EndPAD
+$PAD
+Sh "3" C 2 2 0 0 0
+Dr 2 0 0
+At HOLE N 00E0FFFF
+Ne 0 ""
+Po -2.54 -3.81
+$EndPAD
+$PAD
+Sh "4" C 2 2 0 0 0
+Dr 2 0 0
+At HOLE N 00E0FFFF
+Ne 0 ""
+Po -5.08 -3.81
+$EndPAD
+$SHAPE3D
+Na "packages3d/molex_kk100_a-4455bn25.wrl"
+Sc 1 1 1
+Of 0 0 0
+Ro 0 0 180
+$EndSHAPE3D
+$EndMODULE molex_kk100_4455_5way
 $EndLIBRARY
