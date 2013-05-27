@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 2 date 27/05/2013 10:42:21
+PCBNEW-BOARD Version 2 date 27/05/2013 11:06:42
 
 # Created by Pcbnew(2013-03-19 BZR 4004)-stable
 
@@ -68,7 +68,7 @@ Pad2MaskClearance 0.254
 SolderMaskMinWidth 0
 AuxiliaryAxisOrg 0 0
 VisibleElements 7FFFFFFF
-PcbPlotParams (pcbplotparams (layerselection 3178497) (usegerberextensions true) (excludeedgelayer true) (linewidth 60) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 0) (psnegative false) (psa4output false) (plotreference true) (plotvalue true) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 1) (scaleselection 1) (outputdirectory ""))
+PcbPlotParams (pcbplotparams (layerselection 284983297) (usegerberextensions true) (excludeedgelayer true) (linewidth 60) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 0) (psnegative false) (psa4output false) (plotreference true) (plotvalue false) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 0) (scaleselection 1) (outputdirectory production/))
 $EndSETUP
 
 $EQUIPOT
