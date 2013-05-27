@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 25/05/2013 20:14:35
+EESchema Schematic File Version 2  date 27/05/2013 10:33:13
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "ppm2spi Convertor"
-Date "25 may 2013"
+Date "27 may 2013"
 Rev "0.1"
 Comp "Copyright Cameron Weeks <th9xer@gmail.com>"
 Comment1 "Licensed under the TAPR Open Hardware License (www.tapr.org/OHL)"
@@ -832,7 +832,7 @@ Text Notes 8400 3600 0    60   ~ 0
 Silkscreen labels from modules are in blue
 Text Notes 4600 5050 0    60   ~ 0
 Bind switch.\nOnly does anything with Flysky protocol.\nHubsan protocol always binds.
-Text Notes 5850 1650 0    60   ~ 0
+Text Notes 6100 1650 0    60   ~ 0
 Debug pins.\nCurrently show interrupt timing.\nFor use with oscilloscope etc.
 $Comp
 L JUMPER JP1
@@ -1037,7 +1037,7 @@ Wire Wire Line
 	9950 4550 9500 4550
 Text Notes 4800 2000 0    60   ~ 0
 LEAVE OPEN
-Text Notes 3200 1050 0    60   ~ 0
+Text Notes 3250 1400 0    60   ~ 0
 JP1. Currently unused.\nMight be used in the future for more\nadvanced comminication with the module.
 Text Notes 5000 6700 0    60   ~ 0
 Green - Hubsan Protocol
@@ -1218,7 +1218,7 @@ Bind
 Text Notes 6250 3300 0    60   ~ 0
 Alternative channel order
 Text Notes 4600 5400 0    60   ~ 0
-Alternative channel order\nAllows this module to work\nwith other transmitters
+JP2 enables alternative channel order\nAllows this module to work\nwith other transmitters
 Text Label 5000 3900 0    60   ~ 0
 Rx
 Text Label 5000 4000 0    60   ~ 0
@@ -1277,4 +1277,40 @@ Wire Wire Line
 	1550 2300 1700 2300
 Wire Wire Line
 	1700 2300 1700 2350
+$Comp
+L DOUBLE_SCHOTTKY D5
+U 1 1 51A32958
+P 5600 1150
+F 0 "D5" V 5700 1050 40  0000 C CNN
+F 1 "BAT54S" V 5850 1000 40  0000 C CNN
+F 2 "~" H 5600 1150 60  0000 C CNN
+F 3 "~" H 5600 1150 60  0000 C CNN
+	1    5600 1150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR030
+U 1 1 51A32972
+P 5600 1550
+F 0 "#PWR030" H 5600 1550 30  0001 C CNN
+F 1 "GND" H 5600 1480 30  0001 C CNN
+F 2 "" H 5600 1550 60  0001 C CNN
+F 3 "" H 5600 1550 60  0001 C CNN
+	1    5600 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR031
+U 1 1 51A32978
+P 5600 750
+F 0 "#PWR031" H 5600 840 20  0001 C CNN
+F 1 "+5V" H 5600 840 30  0000 C CNN
+F 2 "" H 5600 750 60  0001 C CNN
+F 3 "" H 5600 750 60  0001 C CNN
+	1    5600 750 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 1150 5800 2300
+Connection ~ 5800 2300
 $EndSCHEMATC
