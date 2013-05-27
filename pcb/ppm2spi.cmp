@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-03-19 BZR 4004)-stable date = 25/05/2013 20:09:20
+Cmp-Mod V01 Created by CvPcb (2013-03-19 BZR 4004)-stable date = 27/05/2013 10:34:30
 
 BeginCmp
 TimeStamp = /513DD1BF;
@@ -96,6 +96,13 @@ TimeStamp = /518798CD;
 Reference = D4;
 ValeurCmp = O-BIND;
 IdModule  = LED-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /51A32958;
+Reference = D5;
+ValeurCmp = BAT54S;
+IdModule  = SOT23_BAT54;
 EndCmp
 
 BeginCmp
