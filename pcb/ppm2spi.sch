@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 28/05/2013 11:10:31
+EESchema Schematic File Version 2  date 28/05/2013 11:24:14
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -1216,9 +1216,9 @@ Connection ~ 6950 2800
 Text Notes 6250 3600 0    60   ~ 0
 Bind
 Text Notes 6250 3300 0    60   ~ 0
-Alternative channel order
+Alternative channel order\nCurrently unimplimented
 Text Notes 4600 5400 0    60   ~ 0
-JP2 enables alternative channel order\nAllows this module to work\nwith other transmitters
+JP2 enables alternative channel order\nAllows this module to work\nwith other transmitters\nCurrently unimplimented
 Text Label 5000 3900 0    60   ~ 0
 Rx
 Text Label 5000 4000 0    60   ~ 0

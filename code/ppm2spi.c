@@ -57,9 +57,12 @@ gpio_clear (DDRB,4);        // MISO input
 gpio_set   (DDRB,5);        // SCK output
 
 PORTC=0;
+gpio_set   (DDRC, SPI_CS);   // Output pin3
+gpio_clear (DDRC, CH_ORD);   // Input pin4
+gpio_set   (PORTC,CH_ORD);   // Pull up resistor on pin4
 gpio_clear (DDRC, BIND_SW);  // Input pin5
 gpio_set   (PORTC,BIND_SW);  // Pull up resistor on pin5
-gpio_set   (DDRC, SPI_CS);   // Output pin3
+
 
 PORTD=0;
 gpio_clear (DDRD, 0);  // Serial Rx input
