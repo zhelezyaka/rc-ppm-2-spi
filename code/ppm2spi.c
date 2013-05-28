@@ -64,10 +64,10 @@ gpio_set   (DDRC, SPI_CS);   // Output pin3
 PORTD=0;
 gpio_clear (DDRD, 0);  // Serial Rx input
 gpio_set   (DDRD, 1);  // Serial Tx output
-gpio_set   (DDRD, LED_G);  // LED green
-gpio_set   (DDRD, LED_R);  // LED red
-gpio_set   (DDRD, LED_Y);  // LED yellow
-gpio_set   (DDRD, LED_O);  // LED yellow
+gpio_set   (DDRD, LED_G);  // LED green  pin2
+gpio_set   (DDRD, LED_R);  // LED red    pin3
+gpio_set   (DDRD, LED_Y);  // LED yellow pin4
+gpio_set   (DDRD, LED_O);  // LED orange pin5
 
 
 /* Bit bang SPI, to delete
