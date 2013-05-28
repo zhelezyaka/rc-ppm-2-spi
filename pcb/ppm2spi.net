@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "Z:/Dev/Micro_Avr/model - jp twister quad tx/rc-ppm-2-spi/trunk/pcb/ppm2spi.sch")
-    (date "27/05/2013 10:32:05")
+    (date "28/05/2013 10:33:43")
     (tool "eeschema (2013-03-19 BZR 4004)-stable"))
   (components
     (comp (ref P5)
@@ -180,7 +180,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 513DD1A2))
     (comp (ref U1)
-      (value MCP1702-5v)
+      (value XC6202P502PR)
       (libsource (lib regul) (part 7805))
       (sheetpath (names /) (tstamps /))
       (tstamp 513DD19F))
@@ -469,7 +469,9 @@
         (fp 1H*))
       (fields
         (field (name Reference) H)
-        (field (name Value) HOLE_M3))
+        (field (name Value) HOLE_M3)
+        (field (name Footprint) ~)
+        (field (name Datasheet) ~))
       (pins
         (pin (num 1) (name ~) (type input)))))
   (libraries
