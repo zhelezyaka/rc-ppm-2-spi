@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 28/05/2013 10:33:40
+EESchema Schematic File Version 2  date 28/05/2013 11:10:31
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -133,12 +133,12 @@ F 3 "" H 4050 5950 60  0001 C CNN
 	1    4050 5950
 	0    -1   -1   0   
 $EndComp
-Text Label 5000 4300 0    60   ~ 0
-LED3
-Text Label 5000 4200 0    60   ~ 0
-LED2
 Text Label 5000 4100 0    60   ~ 0
-LED1
+LED_G
+Text Label 5000 4300 0    60   ~ 0
+LED_Y
+Text Label 5000 4200 0    60   ~ 0
+LED_R
 $Comp
 L GND #PWR01
 U 1 1 513E082D
@@ -258,12 +258,12 @@ Text Label 5000 2500 0    60   ~ 0
 DEBUG2
 Text Label 5000 2400 0    60   ~ 0
 DEBUG1
-Text Label 3550 6650 0    60   ~ 0
-LED3
-Text Label 3550 6300 0    60   ~ 0
-LED2
 Text Label 3550 5950 0    60   ~ 0
-LED1
+LED_G
+Text Label 3550 6650 0    60   ~ 0
+LED_Y
+Text Label 3550 6300 0    60   ~ 0
+LED_R
 $Comp
 L GND #PWR06
 U 1 1 513E05CD
@@ -513,11 +513,22 @@ F 3 "" H 7100 2850 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED D3
+L LED D1
 U 1 1 513DD20F
+P 4600 5950
+F 0 "D1" H 4600 6050 50  0000 C CNN
+F 1 "G-HS" H 4600 5850 50  0000 C CNN
+F 2 "" H 4600 5950 60  0001 C CNN
+F 3 "" H 4600 5950 60  0001 C CNN
+	1    4600 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D3
+U 1 1 513DD20C
 P 4600 6650
 F 0 "D3" H 4600 6750 50  0000 C CNN
-F 1 "G-HS" H 4600 6550 50  0000 C CNN
+F 1 "Y-FSM" H 4600 6550 50  0000 C CNN
 F 2 "" H 4600 6650 60  0001 C CNN
 F 3 "" H 4600 6650 60  0001 C CNN
 	1    4600 6650
@@ -525,24 +536,13 @@ F 3 "" H 4600 6650 60  0001 C CNN
 $EndComp
 $Comp
 L LED D2
-U 1 1 513DD20C
+U 1 1 513DD209
 P 4600 6300
 F 0 "D2" H 4600 6400 50  0000 C CNN
-F 1 "Y-FSM" H 4600 6200 50  0000 C CNN
+F 1 "R-FS" H 4600 6200 50  0000 C CNN
 F 2 "" H 4600 6300 60  0001 C CNN
 F 3 "" H 4600 6300 60  0001 C CNN
 	1    4600 6300
-	1    0    0    -1  
-$EndComp
-$Comp
-L LED D1
-U 1 1 513DD209
-P 4600 5950
-F 0 "D1" H 4600 6050 50  0000 C CNN
-F 1 "R-FS" H 4600 5850 50  0000 C CNN
-F 2 "" H 4600 5950 60  0001 C CNN
-F 3 "" H 4600 5950 60  0001 C CNN
-	1    4600 5950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1039,11 +1039,11 @@ Text Notes 4800 2000 0    60   ~ 0
 LEAVE OPEN
 Text Notes 3250 1400 0    60   ~ 0
 JP1. Currently unused.\nMight be used in the future for more\nadvanced comminication with the module.
-Text Notes 5000 6700 0    60   ~ 0
-Green - Hubsan Protocol
-Text Notes 5000 6300 0    60   ~ 0
-Yellow - Flysky Protocol\nWith Quadcopter mods
 Text Notes 5000 6000 0    60   ~ 0
+Green - Hubsan Protocol
+Text Notes 5000 6650 0    60   ~ 0
+Yellow - Flysky Protocol\nWith Quadcopter mods
+Text Notes 5000 6350 0    60   ~ 0
 Red - Flysky Protocol
 $Comp
 L LED D4
@@ -1075,11 +1075,11 @@ Wire Wire Line
 Wire Wire Line
 	3800 7000 3550 7000
 Text Label 3550 7000 0    60   ~ 0
-LED4
+LED_O
 Text Notes 5000 7000 0    60   ~ 0
 Orange - Binding
 Text Label 5000 4400 0    60   ~ 0
-LED4
+LED_O
 $Comp
 L CONN_4 P6
 U 1 1 51879B19
