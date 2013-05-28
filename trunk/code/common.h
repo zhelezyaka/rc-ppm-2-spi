@@ -103,6 +103,7 @@ extern volatile s16 Channels[NUM_OUT_CHANNELS];
 
 //Port C
 #define SPI_CS			3
+#define CH_ORD          4
 #define	BIND_SW			5
 
 //Port B
