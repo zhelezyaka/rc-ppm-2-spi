@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-03-19 BZR 4004)-stable date = 27/05/2013 10:34:30
+Cmp-Mod V01 Created by CvPcb (2013-03-19 BZR 4004)-stable date = 28/05/2013 00:21:33
 
 BeginCmp
 TimeStamp = /513DD1BF;
@@ -305,7 +305,7 @@ BeginCmp
 TimeStamp = /513DD19F;
 Reference = U1;
 ValeurCmp = MCP1702-5v;
-IdModule  = SOT23_GIO;
+IdModule  = SOT89_OGI;
 EndCmp
 
 BeginCmp

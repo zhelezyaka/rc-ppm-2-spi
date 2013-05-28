@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 27/05/2013 10:33:13
+EESchema Schematic File Version 2  date 28/05/2013 10:33:40
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "ppm2spi Convertor"
-Date "27 may 2013"
+Date "28 may 2013"
 Rev "0.1"
 Comp "Copyright Cameron Weeks <th9xer@gmail.com>"
 Comment1 "Licensed under the TAPR Open Hardware License (www.tapr.org/OHL)"
@@ -737,7 +737,7 @@ L 7805 U1
 U 1 1 513DD19F
 P 8600 1600
 F 0 "U1" H 8750 1404 60  0000 C CNN
-F 1 "MCP1702-5v" H 8600 1800 60  0000 C CNN
+F 1 "XC6202P502PR" H 8600 1800 60  0000 C CNN
 F 2 "" H 8600 1600 60  0001 C CNN
 F 3 "" H 8600 1600 60  0001 C CNN
 	1    8600 1600
