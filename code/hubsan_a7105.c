@@ -135,6 +135,8 @@ static void hubsan_init()
     //Reset VCO Band calibration
     //A7105_WriteReg(0x25, 0x08);
 
+    A7105_SetPower(Model.tx_power);
+
     A7105_Strobe(A7105_STANDBY);
 }
 
@@ -244,6 +246,7 @@ static u16 hubsan_cb()
         A7105_ReadData(packet, 16);
         if(packet[1] == 9) {
             state = DATA_1;
+            A7105_WriteReg(A7105_1F_CODE_I, 0x0F);
             PROTOCOL_SetBindState(0);
 			g_initializing = 0;   //Edit by cam - added to indicate normal data transmission has begun
             return 28000; //35.5msec elapsed since last write
