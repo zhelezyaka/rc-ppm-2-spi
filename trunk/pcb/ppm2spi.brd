@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 2 date 28/05/2013 11:14:45
+PCBNEW-BOARD Version 2 date 03/07/2013 11:54:18
 
 # Created by Pcbnew(2013-03-19 BZR 4004)-stable
 
@@ -21,7 +21,7 @@ $EndGENERAL
 $SHEETDESCR
 Sheet A4 11693 8268
 Title "ppm2spi convertor"
-Date "28 may 2013"
+Date "3 jul 2013"
 Rev "0.1"
 Comp "Copyright Cameron Weeks <th9xer@gmail.com>"
 Comment1 "Licensed under the TAPR Open Hardware License (www.tapr.org/OHL)"
@@ -68,7 +68,7 @@ Pad2MaskClearance 0.254
 SolderMaskMinWidth 0
 AuxiliaryAxisOrg 0 0
 VisibleElements 7FFFFFBF
-PcbPlotParams (pcbplotparams (layerselection 284983297) (usegerberextensions true) (excludeedgelayer true) (linewidth 60) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 0) (psnegative false) (psa4output false) (plotreference true) (plotvalue false) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 0) (scaleselection 1) (outputdirectory production/))
+PcbPlotParams (pcbplotparams (layerselection 284983297) (usegerberextensions true) (excludeedgelayer true) (linewidth 60) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 0) (psnegative false) (psa4output false) (plotreference true) (plotvalue true) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 0) (scaleselection 1) (outputdirectory production/))
 $EndSETUP
 
 $EQUIPOT
@@ -925,14 +925,14 @@ Ro 0 0 0
 $EndSHAPE3D
 $EndMODULE SM0603
 $MODULE SM0603
-Po 113.2586 91.1098 0 15 518804F0 513DD5EC ~~
+Po 113.2586 91.1098 0 15 51D402A1 513DD5EC ~~
 Li SM0603
 Sc 513DD5EC
 AR /513DD1AD
 Op 0 0 0
 At SMD
-T0 2.18948 0.12192 0.7 0.7 0 0.1 N V 21 N "R3"
-T1 2.16916 -0.98044 0.7 0.7 0 0.1 N V 21 N "1K"
+T0 1.3462 -2.3114 0.7 0.7 0 0.1 N V 21 N "R3"
+T1 0.9906 -1.4478 0.7 0.7 0 0.1 N V 21 N "1K"
 DS -1.143 -0.635 1.143 -0.635 0.127 21
 DS 1.143 -0.635 1.143 0.635 0.127 21
 DS 1.143 0.635 -1.143 0.635 0.127 21
@@ -2301,14 +2301,14 @@ Po -1.6256 0
 $EndPAD
 $EndMODULE JUMPER_2PAD
 $MODULE PIN_ARRAY_3X1
-Po 129.99212 94.82328 0 15 51A1D9A9 51899300 ~~
+Po 129.99212 94.82328 0 15 51D402A6 51899300 ~~
 Li PIN_ARRAY_3X1
 Cd Connecteur 3 pins
 Kw CONN DEV
 Sc 51899300
 AR /51899477
 Op 0 0 0
-T0 -4.61264 -1.397 0.7 0.7 0 0.1 N V 21 N "K1"
+T0 2.24028 -2.11328 0.7 0.7 0 0.1 N V 21 N "K1"
 T1 0.72136 -1.9304 0.7 0.7 0 0.1 N I 21 N "CONN_3"
 DS -3.81 1.27 -3.81 -1.27 0.1524 21
 DS -3.81 -1.27 3.81 -1.27 0.1524 21
