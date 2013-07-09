@@ -22,6 +22,7 @@
 #include <stdlib.h>
 #include <avr/interrupt.h>
 #include <avr/pgmspace.h>
+#include <avr/eeprom.h>
 
 #define NEUTRAL 0
 #define MARGIN 200 //10us
@@ -44,7 +45,50 @@ s16 chtemp;
 int main (void)
 {
 
-Model.fixed_id = 0x00102030;
+// Check to see if a tx id has been generated before
+if (eeprom_read_byte((uint8_t*)0x05) == eeprom_read_byte((uint8_t*)0x06))
+	{
+	Model.fixed_id = rand() + ((u32)rand() << 16);
+	eeprom_write_dword ((uint32_t*)0x00,Model.fixed_id);
+	eeprom_write_byte ((uint8_t*)5,0x34); //Just two different numbers to denote a locked in tx id
+	eeprom_write_byte ((uint8_t*)6,0xA4);
+	}
+else
+	{
+	Model.fixed_id = eeprom_read_dword((uint32_t*)0x00);
+	}
+
+// There is a possible bug in the FlySky protocol code (flysky_a7105.c). 
+// Thanks Rick for spotting this, you know who you are !
+//
+// To set the picture:
+// to obtain the channel number chanoffset is subtracted from a number in tx_channels[]
+// The code in flysky_a7105.c is:
+// A7105_WriteData(packet, 21, tx_channels[chanrow][chancol]-chanoffset);
+//
+// The chanoffset variable which is some number between 0-15 (and as it is solely based 
+// on tx id could well be any of these numbers) is going to cause a negative channel 
+// number (or wrap around, whatever you want to call it) at some point because the 
+// lowest channel number in tx_channels[] is 10.
+//
+// chanoffset is (bits 4-7 of tx id) and is controllable independently from 
+// chanrow (bits 0-3 of tx id) and chancol (rolling 0-15), so this is 
+// guaranteed to happen given the right tx id.
+//
+// Therefore we must constrain bits 4-7 of tx id to 0-9 to be safe
+
+if (((Model.fixed_id & 0xff) / 16) > 9 ) 
+	{
+	Model.fixed_id &= 0xffffff0f;
+	Model.fixed_id |= 0x00000090;
+	}
+
+//TODO: A way to pick another tx id. Can't currently think of a nice way to do it. Don't 
+//like the idea of press length on the bind button, or using a channel on the Tx, both 
+//to easy to get wrong.
+//Maybe a tx channel position and the bind button to confirm, yes like the sound of that.
+
+
 Model.num_channels = 8;
 Model.tx_power = TXPOWER_100mW ;
 
@@ -115,6 +159,8 @@ if ((chtemp <= (NEUTRAL+MARGIN     )) && (chtemp >= (NEUTRAL-MARGIN    )))
 	{proto_mode=FLYSKY_MOD; gpio_set(PORTD,LED_Y);}
 if ( chtemp >= (CHAN_MAX_VALUE-MARGIN))                        
 	{proto_mode=HUBSAN_STD; gpio_set(PORTD,LED_G);}
+
+//TODO: what if none of these ?
 
 
 if (proto_mode == HUBSAN_STD) 
