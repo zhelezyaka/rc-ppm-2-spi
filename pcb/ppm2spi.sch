@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 28/05/2013 11:24:14
+EESchema Schematic File Version 2  date 09/07/2013 21:25:35
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "ppm2spi Convertor"
-Date "28 may 2013"
+Date "9 jul 2013"
 Rev "0.1"
 Comp "Copyright Cameron Weeks <th9xer@gmail.com>"
 Comment1 "Licensed under the TAPR Open Hardware License (www.tapr.org/OHL)"
@@ -587,7 +587,7 @@ F 1 "CONN_5" V 1250 1400 50  0000 C CNN
 F 2 "" H 1200 1400 60  0001 C CNN
 F 3 "" H 1200 1400 60  0001 C CNN
 	1    1200 1400
-	-1   0    0    1   
+	-1   0    0    -1  
 $EndComp
 $Comp
 L CONN_6 P2
