@@ -122,7 +122,7 @@ if (proto_mode == HUBSAN_STD)
 
 if (proto_mode <= FLYSKY_MOD)
 	{
-	if (BIND_SW_READ())
+	if (!BIND_SW_READ())
 		{FLYSKY_Cmds(PROTOCMD_BIND);  gpio_set(PORTD,LED_O);}
 	else
 		{FLYSKY_Cmds(PROTOCMD_INIT);}
