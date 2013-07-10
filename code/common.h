@@ -63,6 +63,10 @@ enum proto_mode {
     FLYSKY_STD,
     FLYSKY_MOD,
     HUBSAN_STD,
+	JP_NANOSTIK,
+	SPARE_PROTO1,
+	SPARE_PROTO2,
+	SET_ID
 };
 
 struct Model {

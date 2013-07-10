@@ -23,9 +23,13 @@
 #include <avr/interrupt.h>
 #include <avr/pgmspace.h>
 #include <avr/eeprom.h>
+#include <avr/wdt.h> 
 
 #define NEUTRAL 0
-#define MARGIN 200 //10us
+
+//We have 7 modes and a servo travel of 20000 (+-10000) 
+//20000/7 = 2857 
+#define MODE_DIVISOR 2858 
 
 // ******************************************************************************************
 // ******                        Global Variables                                      ******
@@ -36,7 +40,8 @@ volatile uint8_t g_sync_count = 0;
 volatile uint16_t g_icr1_previous = 0;
 volatile uint8_t g_initializing = 1;
 volatile uint8_t g_need_to_sync = 1;
-uint8_t proto_mode=FLYSKY;
+volatile uint16_t g_entropy = 0;
+uint8_t proto_mode;
 struct Transmitter Transmitter;
 struct Model Model;
 volatile s16 Channels[NUM_OUT_CHANNELS];
@@ -44,53 +49,18 @@ volatile s16 Channels[NUM_OUT_CHANNELS];
 s16 chtemp;
 int main (void)
 {
+int16_t i;
+uint8_t j;
+uint8_t mcusr_mirror;
 
-// Check to see if a tx id has been generated before
-if (eeprom_read_byte((uint8_t*)0x05) == eeprom_read_byte((uint8_t*)0x06))
-	{
-	Model.fixed_id = rand() + ((u32)rand() << 16);
-	eeprom_write_dword ((uint32_t*)0x00,Model.fixed_id);
-	eeprom_write_byte ((uint8_t*)5,0x34); //Just two different numbers to denote a locked in tx id
-	eeprom_write_byte ((uint8_t*)6,0xA4);
-	}
-else
-	{
-	Model.fixed_id = eeprom_read_dword((uint32_t*)0x00);
-	}
-
-// There is a possible bug in the FlySky protocol code (flysky_a7105.c). 
-// Thanks Rick for spotting this, you know who you are !
-//
-// To set the picture:
-// to obtain the channel number chanoffset is subtracted from a number in tx_channels[]
-// The code in flysky_a7105.c is:
-// A7105_WriteData(packet, 21, tx_channels[chanrow][chancol]-chanoffset);
-//
-// The chanoffset variable which is some number between 0-15 (and as it is solely based 
-// on tx id could well be any of these numbers) is going to cause a negative channel 
-// number (or wrap around, whatever you want to call it) at some point because the 
-// lowest channel number in tx_channels[] is 10.
-//
-// chanoffset is (bits 4-7 of tx id) and is controllable independently from 
-// chanrow (bits 0-3 of tx id) and chancol (rolling 0-15), so this is 
-// guaranteed to happen given the right tx id.
-//
-// Therefore we must constrain bits 4-7 of tx id to 0-9 to be safe
-
-if (((Model.fixed_id & 0xff) / 16) > 9 ) 
-	{
-	Model.fixed_id &= 0xffffff0f;
-	Model.fixed_id |= 0x00000090;
-	}
-
-//TODO: A way to pick another tx id. Can't currently think of a nice way to do it. Don't 
-//like the idea of press length on the bind button, or using a channel on the Tx, both 
-//to easy to get wrong.
-//Maybe a tx channel position and the bind button to confirm, yes like the sound of that.
-
+//The correct sequence of events to disable the watchdog timer
+mcusr_mirror = MCUSR;
+MCUSR = 0;
+wdt_disable();
 
 Model.num_channels = 8;
 Model.tx_power = TXPOWER_100mW ;
+g_entropy=0;
 
 PORTB=0;
 gpio_clear (DDRB, PPM_IN);  // Input  pin0
@@ -151,22 +121,129 @@ while (g_sync_count <= 20) ;
 // Disable Input Capture
 TCCR1B &= ~(1<<ICNC1);
 
+// Get some much needed entropy for rand()
+srand(g_entropy); 
+
+// Check to see if a tx id has been generated before
+if (eeprom_read_byte((uint8_t*)0x05) == eeprom_read_byte((uint8_t*)0x06))
+	{
+	Model.fixed_id = rand() + ((u32)rand() << 16);
+	eeprom_write_dword ((uint32_t*)0x00,Model.fixed_id);
+	eeprom_write_byte ((uint8_t*)5,0x34); //Just two different numbers to denote a locked in tx id
+	eeprom_write_byte ((uint8_t*)6,0xA4);
+	}
+else
+	{
+	Model.fixed_id = eeprom_read_dword((uint32_t*)0x00);
+	}
+
+// There is a possible bug in the FlySky protocol code (flysky_a7105.c). 
+// Thanks Rick for spotting this, you know who you are !
+//
+// To set the picture:
+// to obtain the channel number chanoffset is subtracted from a number in tx_channels[]
+// The code in flysky_a7105.c is:
+// A7105_WriteData(packet, 21, tx_channels[chanrow][chancol]-chanoffset);
+//
+// The chanoffset variable which is some number between 0-15 (and as it is solely based 
+// on tx id could well be any of these numbers) is going to cause a negative channel 
+// number (or wrap around, whatever you want to call it) at some point because the 
+// lowest channel number in tx_channels[] is 10.
+//
+// chanoffset is (bits 4-7 of tx id) and is controllable independently from 
+// chanrow (bits 0-3 of tx id) and chancol (rolling 0-15), so this is 
+// guaranteed to happen given the right tx id.
+//
+// Therefore we must constrain bits 4-7 of tx id to 0-9 to be safe
+
+if (((Model.fixed_id & 0xff) / 16) > 9 ) 
+	{
+	Model.fixed_id &= 0xffffff0f;
+	Model.fixed_id |= 0x00000090;
+	}
+
+//Channel 8 tells us what mode to be in
 chtemp = Channels[7];
+for (i=(-10000+MODE_DIVISOR), j=0; i<chtemp; i+=MODE_DIVISOR, j++);
 
-if ( chtemp <= (CHAN_MIN_VALUE+MARGIN))                        
-	{proto_mode=FLYSKY_STD; gpio_set(PORTD,LED_R);}
-if ((chtemp <= (NEUTRAL+MARGIN     )) && (chtemp >= (NEUTRAL-MARGIN    ))) 
-	{proto_mode=FLYSKY_MOD; gpio_set(PORTD,LED_Y);}
-if ( chtemp >= (CHAN_MAX_VALUE-MARGIN))                        
-	{proto_mode=HUBSAN_STD; gpio_set(PORTD,LED_G);}
+switch (j)
+	{
+	case 0:
+	proto_mode=FLYSKY_STD; 
+	gpio_set(PORTD,LED_R);
+	break;
 
-//TODO: what if none of these ?
+	case 1:
+	proto_mode=FLYSKY_MOD; 
+	gpio_set(PORTD,LED_Y);
+	break;
+
+	case 2:
+	proto_mode=HUBSAN_STD; 
+	gpio_set(PORTD,LED_G);
+	break;
+
+	case 3:
+	proto_mode=JP_NANOSTIK; 
+	gpio_set(PORTD,LED_R);
+	gpio_set(PORTD,LED_Y);
+	while(1); //Not yet implimented so stop
+	break;
+
+	case 4:
+	proto_mode=SPARE_PROTO1; 
+	gpio_set(PORTD,LED_Y);
+	gpio_set(PORTD,LED_G);
+	while(1); //Not yet implimented so stop
+	break;
+
+	case 5:
+	proto_mode=SPARE_PROTO2; 
+	gpio_set(PORTD,LED_G);
+	gpio_set(PORTD,LED_R);
+	while(1); //Not yet implimented so stop
+	break;
+
+	case 6:
+	proto_mode=SET_ID; 
+	gpio_set(PORTD,LED_G);
+	gpio_set(PORTD,LED_R);
+	gpio_set(PORTD,LED_Y);
+	break;
+	}
+
+if (proto_mode == SET_ID)
+	{
+	while (1)
+		{
+		if (!BIND_SW_READ()) break;
+		_delay_ms(300);
+		gpio_clear(PORTD,LED_G);
+		gpio_clear(PORTD,LED_R);
+		gpio_clear(PORTD,LED_Y);
+		if (!BIND_SW_READ()) break;
+		_delay_ms(300);
+		gpio_set(PORTD,LED_G);
+		gpio_set(PORTD,LED_R);
+		gpio_set(PORTD,LED_Y);
+		}
+	gpio_set(PORTD,LED_G);
+	gpio_set(PORTD,LED_R);
+	gpio_set(PORTD,LED_Y);
+	while (!BIND_SW_READ()); //Wait for button release
+	eeprom_write_byte ((uint8_t*)5,0xFF); //Make sure a new tx id is picked at boot up
+	eeprom_write_byte ((uint8_t*)6,0xFF); //Make sure a new tx id is picked at boot up
+	while (!eeprom_is_ready()) {} //Make sure EEPROM write finishes
+	//cli(); // disable interrupts
+  	wdt_enable(WDTO_250MS); // enable watchdog
+  	while(1); // wait for watchdog to reset processor 
+	}
 
 
 if (proto_mode == HUBSAN_STD) 
 	{HUBSAN_Cmds(PROTOCMD_BIND); gpio_set(PORTD,LED_O);}
 
-if (proto_mode <= FLYSKY_MOD)
+if (proto_mode == FLYSKY_MOD || proto_mode == FLYSKY_STD)
 	{
 	if (!BIND_SW_READ())
 		{FLYSKY_Cmds(PROTOCMD_BIND);  gpio_set(PORTD,LED_O);}
@@ -197,6 +274,8 @@ ISR(TIMER1_CAPT_vect)
 gpio_set(PORTB, DEBUG_1); //High
 static uint16_t icr1_current; //static for debug
 static int16_t icr1_diff;     //static for debug
+
+if (g_entropy==0) {g_entropy = TCNT1;}
 
 icr1_current=ICR1; 
 icr1_diff = icr1_current - g_icr1_previous;
