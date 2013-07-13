@@ -8,6 +8,8 @@
  * First batch of PCB's has arrived but is scrap due to my mistake
  * Currently testing the first batch of PCBs for any more mistakes, once this is done it's time to order the second batch.
 
+
 *2013.03.14* 
+
 The code is beta (as I have test flown it), the rest is alpha, PERL script included. 
 It currently has been test flown with both a [http://www.jperkinsdistribution.co.uk/detail.php?JPNO=6600034&activepage=1&Navmain=Helicopters&subcatname=RTF/RC%20ready%20-%20Twister%20helis JP twister quad] and a Hubsan X4, both seem to work OK.
