@@ -4,7 +4,7 @@ To build one of these up you require one of the PCB's I have had produced, and t
 Unfortunately I can't offer to build one for you, or supply the components, you will have to sort this out yourself. The BOM contains links to where 
 you can obtain the components. As I am in the UK most of the links are UK based.
 
-The schematic and BOM is in the SVN repository. See here DevelpomentSoftware for the software to download them, and the software to view the schematic.
+The schematic and BOM is in the SVN repository. See here DevelopmentSoftware for the software to download them, and the software to view the schematic.
 
 One of the items on the BOM you may already have, the RF module itself. The original transmitters of some of the models this module is intended for contain said RF module.
 This sometimes can be removed and used in this project. For pictures and comments on this see here .....
