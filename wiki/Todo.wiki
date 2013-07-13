@@ -6,3 +6,4 @@
  * Include screen shots on [Programming] wiki page
  * Include photo of the current PCB and build
  * Add page describing perl script use
+ * Link in my Youtube soldering vids
