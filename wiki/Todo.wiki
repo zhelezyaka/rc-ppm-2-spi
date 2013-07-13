@@ -5,3 +5,4 @@
  * Decode the JP Nanostik protocol, the perl script will help here.
  * Include screen shots on [Programming] wiki page
  * Include photo of the current PCB and build
+ * Add page describing perl script use
