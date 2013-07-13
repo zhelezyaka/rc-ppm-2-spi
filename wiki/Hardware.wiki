@@ -8,7 +8,7 @@ The schematic and BOM is in the SVN repository. See here DevelopmentSoftware for
 
 One of the items on the BOM you may already have, the RF module itself. The original transmitters of some of the models this module is intended for contain said RF module.
 This sometimes can be removed and used in this project. For pictures and comments on this see here .....
-If you don't want to disassemble your original transmitter you can by an RF module here. It also claims to have 500 meter range, but reports have it as not quite that far.
+If you don't want to disassemble your original transmitter you can by an RF module [http://www.aliexpress.com/item/A7105-Wireless-RF-2-4GHz-Transceiver-Module-3-3V-NRF24L01-SI4432-10dBm-64mA-20mA/619869938.html here] from AliExpress. It also claims to have 500 meter range, but reports have it as not quite that far.
 
 ||RF Module||Pin 1||2||3||4||5||6||
 ||JP Twister quad||CS||CLK||IO||NA||GND||3.3v||
