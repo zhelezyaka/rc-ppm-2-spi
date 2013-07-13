@@ -1,0 +1,76 @@
+#summary FAQ
+
+<b>Q: What's this all about then ?</b><br>
+<b>A:</b> It's a transmitter module to allow you to fly some of the cheap RTF 
+aircraft (that will usually only work with the transmitter they are supplied 
+with) on any transmitter that will take a JR module.<br>
+
+<b>Q: Does it use Arduino ?</b><br>
+<b>A:</b> No. For early development I use an ATMega that happened to be on an Arduino board, but no Arduino code was or is used. No bootloader, no anything. <br>
+
+<b>Q: What models does it work with ?</b><br>
+<b>A:</b> Personally tested with Hubsan X4, JP Twister Quad.<br>
+<b>A: </b>Others tell me it works with WLToys v929, WLToys V939, Syma X1, and 
+HCW553 <br>
+
+<b>Q: I can fly some of the models you mention with a stock FlySky module, so 
+why do I need this module ?</b><br>
+<b>A: </b>Some of the more advanced features these models have, such as the flip 
+button, turning cameras on and off, and turning LEDs on and off won't work with 
+the stock FlySky module. Also it won't fly Hubsan X4's.<br>
+<br>
+<b>Q: Can it support xxx model ?</b><br>
+<b>A:</b> If it uses the A7105 chipset then with some software work, yes. 
+However if it's a new protocol and therefore the protocol requires decoding then 
+either you are going to have to do it yourself and code it yourself or buy me 
+one of the models to examine. ** SEE NOTE BELOW<br>
+<br>
+<b>Q: So how long to decode a protocol if I buy you a model ?</b><br>
+<b>A: </b>You might be quicker to do it yourself.<br>
+<br>
+<b>Q: But I don't know any programming or electronics.</b><br>
+<b>A: </b>Probably still quicker to do it yourself :)<br>
+<br>
+<b>Q: What about supporting other chipsets ?</b><br>
+<b>A:</b> I personally have no need for other chipsets at the minute so right 
+now it's low priority. <b>** SEE NOTE BELOW</b><br>
+<br>
+<b>** NOTE</b><br>
+If however the protocol and chipset code already exists in deviation firmware
+<a href="https://bitbucket.org/PhracturedBlue/deviation/overview">
+https://bitbucket.org/PhracturedBlue/deviation/overview</a> it is much easier to 
+port over, but to test it I would still need a sample of the model in question. 
+The code can be ported without testing but runs a high risk of being useless, to 
+the point where it is not worth spending time on it in the first place.<br>
+<br>
+<b>Q: Where is the schematic and BOM</b><br>
+<b>A:</b> It's in the SVN repository, see wiki page DEVELOPMENT_SOFTWARE for the 
+software to download it and view it. <br>
+<br>
+<b>Q: How would one use the DEBUG1/DEBUG2 pins ?</b><br>
+<b>A: </b>They currently just toggle to show various timing within the software, 
+for use on an oscilloscope.<br>
+<br>
+<b>Q: Why in the schematics the RX/PD0 pin is tied to ICP1/PB0 ?</b><br>
+<b>A: </b>To allow a more advanced serial protocol to talk to the module. Note 
+the schematics are in a state of flux right now, and this feature might never 
+get implemented in software.<br>
+<br>
+<b>Q: When will PCBs be available.</b><br>
+<b>A:</b> I have had the first batch of PCB's but due to my error they are 
+scrap. Once I am convinced there are no more errors on the PCB I will order a 
+second batch. Maybe another week. The last lot took about 3 weeks to arrive from 
+ordering. So that gives 4 weeks total, ish.<br>
+<br>
+<b>Q: How much for a PCB ?</b><br>
+<b>A: </b>Not sure yet, not much, around 5-6 GBP each I imagine.<br>
+<br>
+<b>Q: How much for postage ?</b><br>
+<b>A: </b>I'll have to check weights and get back to you. I will keep it simple 
+and offer one cost regardless of location. Can't imagine much more than 3-4 GBP<br>
+<br>
+<b>Q: Can I get one ready soldered ?</b><br>
+<b>A:</b> No, sorry.<br>
+<br>
+<b>Q: Can I get a kit ?</b><br>
+<b>A: </b>No, sorry.
