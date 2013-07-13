@@ -42,16 +42,12 @@ If you do this then approximate values for the modes are:
 +46  -> +74  Reserved           RED + GREEN
 +75  -> +100 Change module ID   RED + GREEN + YELLOW LEDS FLASHING</code>
 Binding is initiated in either of the FlySky modes by simply holding down the bind button at switch on. The orange LED
-will light to indicate bind mode, as soon as it is lit you can release the bind button. The module will stay in binding mode 
+will light to indicate bind mode. As soon as it is lit you can release the bind button. The module will stay in binding mode 
 for several seconds then default to normal transmission. You have this window to bind your model.
 
-Binding in Hubsan mode happens at every switch on regardless of the bind button. This is a quirk of the Hubsan protocol. Again
-the orange LED will light to show binding is taking progress. However as the Hubsan protocol is a two way protocol the module knows 
-when a successful binding has taken place and will only extinguish the orange LED when this has happened.
+Binding in Hubsan mode happens at every switch on regardless of the bind button. This is a quirk of the Hubsan protocol. Again the orange LED will light to show binding is taking progress. However as the Hubsan protocol is a two way protocol the module knows when a successful binding has taken place and will only extinguish the orange LED when this has happened.
 
-The ID for the module is chosen randomly the first time you switch it on. It is then stored in the processors internal 
-EEPROM and used from then on. If you wish to keep this ID at subsequent re-flashing of the firmware you need to enable the EESAVE
-fuse on the ATMEGA.
+The ID for the module is chosen randomly the first time you switch it on. It is then stored in the processors internal EEPROM and used from then on. If you wish to keep this ID at subsequent re-flashing of the firmware you need to enable the EESAVE fuse on the ATMEGA.
 
 If you wish to change this ID to another randomly chosen one then:
 
