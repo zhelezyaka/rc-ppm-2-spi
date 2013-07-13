@@ -5,6 +5,9 @@ Use this to view the schematic and the PCB design.
 
 The source code was compiled using AVR Studio 4.18 Build 716 http://www.atmel.com/tools/STUDIOARCHIVE.aspx <br> and WinAVR 20100110 http://sourceforge.net/projects/winavr/files/WinAVR/20100110/
 
-To download all the design files and source code you need a SVN client.<br> If you are on Windows download and install TortoiseSVN http://tortoisesvn.net/downloads.html <br>Then copy this URL 
-to the windows clipboard {{{http://rc-ppm-2-spi.googlecode.com/svn/}}} <br>Then navigate to a local folder on your PC where you want to download the files to. <br>Once there 
-right click in the folder and select "SVN Checkout", then click OK in the box that appears.<br>The latest files will magically be downloaded. 
+To download all the design files and source code you need a SVN client.<br>
+ * If you are on Windows download and install TortoiseSVN http://tortoisesvn.net/downloads.html <br>
+ * Then copy this URL to the windows clipboard {{{http://rc-ppm-2-spi.googlecode.com/svn/}}} <br>
+ * Then navigate to a local folder on your PC where you want to download the files to. <br>
+ * Once there right click in the folder and select "SVN Checkout", then click OK in the box that appears.<br>
+ * The latest files will magically be downloaded. 
