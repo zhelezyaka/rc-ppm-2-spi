@@ -1,0 +1,12 @@
+#summary The Syma X1 Transmitter Internals
+
+Some pictures of the Syma X1 transmitter and the RF Module. Click for a close up.
+
+<a href="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/syma-x1/syma-x1-1.jpg">
+<img border="0" src="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/syma-x1/syma-x1-1_sml.jpg">
+
+<a href="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/syma-x1/syma-x1-2.jpg">
+<img border="0" src="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/syma-x1/syma-x1-2_sml.jpg">
+
+<a href="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/syma-x1/syma-x1-3.jpg">
+<img border="0" src="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/syma-x1/syma-x1-3_sml.jpg">
