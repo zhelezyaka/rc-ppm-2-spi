@@ -1,0 +1,10 @@
+#summary Credits
+
+Thanks to PhracturedBlue for the original protocol decodes https://bitbucket.org/PhracturedBlue/deviation/overview and http://www.deviationtx.com/ 
+I personally would love to hear more about your adventures in protocol decoding, I read a snippet from you that hinted toward Arduino and Raspberry pi use, sounded very interesting.
+
+Thanks to TheObstical over on openrcforums for the original seed that lead to this project, and offering up a lot of the protocol information that convinced me it might not be that big a job after all and for some of the Wiki photos.
+
+Thanks to all the guys here http://openrcforums.com/forum/viewtopic.php?f=5&t=2672 for the support and kind words.
+
+Finally thanks to Rick for spotting a potential flaw in the FlySky protocol. (Do you want your full name used so you can have full credits ?)
