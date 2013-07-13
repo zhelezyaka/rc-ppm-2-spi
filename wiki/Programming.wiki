@@ -4,9 +4,10 @@ Once you have the module built you need to flash the firmware. The pre-compiled 
 
 See DevelopmentSoftware for how to get it<br>
 
-You will need an AVR programmer such as the Atmel AVR ISP MkII http://www.atmel.com/tools/AVRISPMKII.aspx usually about 30GBP, you can then use AVR Studio to flash the firmware. See screen shots to follow.
+You will need an AVR programmer such as the Atmel AVR ISP MkII http://www.atmel.com/tools/AVRISPMKII.aspx usually about 30GBP, you can then use AVR Studio to flash the firmware. *See screen shots to follow.*
 
 The first time you flash the blank chip you will need to adjust the ISP frequency right down to 125Khz, this is because the stock processor is only clocked at 1Mhz and the ISP frequency must be a factor of 4 below this.
 
-I know I lot of much cheaper programmers are available http://www.hobbyking.com/hobbyking/store/uh_viewitem.asp?idproduct=21321 and you can use AVRDude http://download.savannah.gnu.org/releases/avrdude/ with them. But I have never been a fan, sorry.
+*Fuse info also to follow*
 
+I know I lot of much cheaper programmers are available http://www.hobbyking.com/hobbyking/store/uh_viewitem.asp?idproduct=21321 and you can use AVRDude http://download.savannah.gnu.org/releases/avrdude/ with them. But I have never been a fan, sorry.
