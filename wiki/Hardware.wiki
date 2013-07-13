@@ -1,0 +1,50 @@
+#summary Whats involved in the hardware
+
+To build one of these up you require one of the PCB's I have had produced, and then the components that are listed in the BOM (Bill of materials).
+Unfortunately I can't offer to build one for you, or supply the components, you will have to sort this out yourself. The BOM contains links to where 
+you can obtain the components. As I am in the UK most of the links are UK based.
+
+The schematic and BOM is in the SVN repository. See here DEVELOPMENT SOFTWARE: for the software to download them, and the software to view the schematic.
+
+One of the items on the BOM you may already have, the RF module itself. The original transmitters of some of the models this module is intended for contain said RF module.
+This sometimes can be removed and used in this project. For pictures and comments on this see here .....
+If you don't want to disassemble your original transmitter you can by an RF module here. It also claims to have 500 meter range, but reports have it as not quite that far.
+
+JP Twister quad   CS CLK IO NA GND 3.3v
+WL Toys V929      CS CLK IO NA GND 3.3v
+HCW553            CS CLK IO NA GND 3.3v
+Syma X1           CS CLK IO NA 3.3v GND
+
+As you can see the first three will plug straight into the 6 pin socket on the modules PCB and work without problem. The Syma X1 RF module as the GND and 3.3v pins 
+reversed so if you plug it in you will fry it. You can still use it but to do so you will have to omit the 6 pin socket from the build and using flying wires from the module 
+PCB to the RF pcb, and make sure you get the ordering correct.
+ 
+The PCB involves surface mount components. A lot of people will now be ruling this project out because they can't do surface mount ! If however you are a competent through
+hole solderer then I would say you absolutely can do surface mount. The prototype PCB was hand soldered using this lot:
+
+Antex TCS230 soldering iron http://www.antex.co.uk/soldering/standard-soldering-irons/tcs230/ <br>
+0.5mm tip http://www.antex.co.uk/soldering/replacement-bits/1100-series-bits/b110560/ <br>
+Flux http://cpc.farnell.com/warton/315-0-5l-bottle/315-noclean-flux-1-2-litre/dp/SD00085 <br>
+Tip cleaner http://cpc.farnell.com/jsp/search/productdetail.jsp?SKU=SD01015 <br>
+0.3mm leaded solder (This is the oddest item in my setup, it's not easy to get a hold of but very much worth the effort) http://www.ebay.co.uk/itm/160619728934 <br>
+Magnifying glass http://www.shesto.co.uk/p218/Flexi-Neck-Magnifier/product_info.html <br>
+120mm LED ring stuck to above magnifier http://www.ebay.co.uk/itm/111019086879 <br>
+Tweezers  http://www.shesto.co.uk/p100/%237-Stainless-Steel-Tweezers/product_info.html <br>
+Loupe (x40 apparently although I doubt it, and LED lit) http://www.ebay.co.uk/itm/350773512491 <br>
+Desoldering braid (always handy) http://cpc.farnell.com/servisol/200004375/soldamop-green-2-5mm-x-10m/dp/SD00667
+
+Solder the physically shorter surface mount components in first, then the taller surface mount ones, then finish with the through hole ones. 
+
+To do the surface mount components put a drop of flux on the pcb and a tiny amount of solder on the tip of the iron. 
+
+For the sub 10 pin packages hold the component in place with the tweezers, and dab the iron on one pin/pad. Then solder the other pins as you would solder anything else.
+
+For the processor dab the iron on a couple of opposite pins/pads just to make sure it can't move, then solder the other pins as you would solder anything else.
+
+If you end up with an ulgy looking "dab" joint just go back and reflow it with some flux and/or solder once you have done the others. 
+
+The pin pitch of the processor is large enough that you can easily solder it pin by pin.
+
+Use the loupe to examine your joints in detail as you see fit.
+
+Use the solder braid to remove any solder bridges .
