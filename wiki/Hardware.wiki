@@ -13,11 +13,11 @@ If you don't want to disassemble your original transmitter you can by an RF modu
 
 This table contains the pinouts for suitable RF modules as used in the original transmitters. Looking at the component side of the module pin 1 is left most.
 
-||RF Module||Pin 1||2||3||4||5||6||
-||[http://code.google.com/p/rc-ppm-2-spi/wiki/HardwareJPTwisterQuadTx JP Twister quad]||CS||CLK||IO||NA||GND||3.3v||
-||[http://code.google.com/p/rc-ppm-2-spi/wiki/HardwareV929Tx WL Toys V929]||CS||CLK||IO||NA||GND||3.3v||
-||[http://code.google.com/p/rc-ppm-2-spi/wiki/HardwareHCW553Tx HCW553]||CS||CLK||IO||NA||GND||3.3v||
-||[http://code.google.com/p/rc-ppm-2-spi/wiki/HardwareSymaX1Tx Syma X1]||CS||CLK||IO||NA||3.3v||GND||
+||RF Module||Pin 1||2||3||4||5||6||Notes||
+||[http://code.google.com/p/rc-ppm-2-spi/wiki/HardwareJPTwisterQuadTx JP Twister quad]||CS||CLK||IO||NA||GND||3.3v||Direct plug in||
+||[http://code.google.com/p/rc-ppm-2-spi/wiki/HardwareV929Tx WL Toys V929]||CS||CLK||IO||NA||GND||3.3v||Direct plug in||
+||[http://code.google.com/p/rc-ppm-2-spi/wiki/HardwareHCW553Tx HCW553]||CS||CLK||IO||NA||GND||3.3v||Direct plug in||
+||[http://code.google.com/p/rc-ppm-2-spi/wiki/HardwareSymaX1Tx Syma X1]||CS||CLK||IO||NA||3.3v||GND||Polarity reversed, needs flying wires||
 
 The first three will plug straight into the 6 pin socket on the modules PCB and work without problem. The Syma X1 RF module has the GND and 3.3v pins 
 reversed so if you plug it in you will fry it. You can still use it but to do so you will have to omit the 6 pin socket from the build and connect to it using flying wires from the module 
