@@ -5,7 +5,7 @@
 *2013.07.13*
  * The code works
  * Schematic is up to date. 
- * First batch of PCB's has arrived but is scrap due to my mistake
+ * First batch of PCB's has arrived but is scrap due to my mistake. Design files have been corrected for this mistake.
  * Currently testing the first batch of PCBs for any more mistakes, once this is done it's time to order the second batch.
 
 
