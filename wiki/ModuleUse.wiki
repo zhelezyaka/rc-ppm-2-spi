@@ -1,0 +1,85 @@
+#summary Instructions for use of the module
+
+The module takes 1000us as bottom stick and 2000us as top stick. With 1500us being treated as center. Please set your transmitter according.
+If the module detects pulses outside these ranges it will limit them to between 1000us and 2000us
+
+Correct channel order is: AIL ELE THR RUD
+
+The module can operate in three modulation modes, they are:
+
+FlySky<br>
+FlySky modified for various quadcopters<br>
+Hubsan X4<br>
+
+Which mode is selected is controlled by the position of channel 8 at the time of switch on. Any change 
+in channel 8 after this time is ignored. This is a saftey feature to stop you changing mode mid flight.
+
+Each mode will light a combination of LEDS to indicate which mode is in use.
+
+The approximate pulse widths and LED combos for the various modes are:
+{{{
+1000us -> 1143us FlySky             RED
+1144us -> 1286us FlySky Mod         YELLOW
+1287us -> 1429us Hubsan             GREEN
+}}}
+Several other modes exists, some are reserved for future protocols and one we will discuss later, they are:
+{{{
+1430us -> 1572us Reserved           RED + YELLOW
+1573us -> 1715us Reserved           YELLOW + GREEN
+1716us -> 1858us Reserved           RED + GREEN
+1859us -> 2000us Change module ID   RED + GREEN + YELLOW LEDS FLASHING
+}}}
+Selecting one of the reserved slots will cause the module to stop. You will need to select another mode and cycle the power to restore operation. 
+
+If using OpenTx I recommend you setup a mixer on channel 8 using MAX as the source, and the weight figure to set the position of channel 8
+and therefore the mode of the module. This then allows you to lock each model memory to the correct modulation for the model. 
+If you do this then approximate values for the modes are:
+{{{
+-100 -> -71  FlySky             RED
+-70  -> -42  FlySky Mod         YELLOW
+-41  -> -13  Hubsan             GREEN
+-12  -> +16  Reserved           RED + YELLOW
++17  -> +45  Reserved           YELLOW + GREEN
++46  -> +74  Reserved           RED + GREEN
++75  -> +100 Change module ID   RED + GREEN + YELLOW LEDS FLASHING
+}}}
+Binding is initiated in either of the FlySky modes by simply holding down the bind button at switch on. The orange LED
+will light to indicate bind mode, as soon as it is lit you can release the bind button. The module will stay in binding mode 
+for several seconds then default to normal transmission. You have this window to bind your model.
+
+Binding in Hubsan mode happens at every switch on regardless of the bind button. This is a quirk of the Hubsan protocol. Again
+the orange LED will light to show binding is taking progress. However as the Hubsan protocol is a two way protocol the module knows 
+when a successful binding has taken place and will only extinguish the orange LED when this has happened.
+
+The ID for the module is chosen randomly the first time you switch it on. It is then stored in the processors internal 
+EEPROM and used from then on. If you wish to keep this ID at subsequent re-flashing of the firmware you need to enable the EESAVE
+fuse on the ATMEGA.
+
+If you wish to change this ID to another randomly chosen one then:
+
+ * Switch on your Tx
+ * Set channel 8 to 1859us - 2000us
+ * Switch off your transmitter then switch it back on 
+ * When you switch back on the RED + GREEN + YELLOW leds will start flashing. At this point the ID hasn't changed. 
+ * Next set channel 8 to represent the mode you wish the module to be in for the model you are flying (doing this now will save you another power cycle). ID is still unchanged at this point.
+ * Press and hold the bind button until the RED + GREEN + YELLOW leds remain solid on. This confirms the change.
+ * As soon as you release the button the module will reboot and lock the change in.
+
+The FlySky mode that is modified for various quadcopters has some extra features.
+
+Setting channel 5 above 1540us sets bit 13 of the rudder channel 
+On my JP Twister Quad with toggles the LEDS
+
+Setting channel 6 above 1540us sets bit 14 of the throttle channel
+Apparently this toggle the use of the video camera on some machines. (I have not tested this)
+
+Setting channel 7 above 1540us sets bit 15 of the throttle channel
+Apparently this toggle the use of the still camera on some machines. (I have not tested this)
+
+Be very careful when playing with channel 6 and 7, as you can see they effect the throttle channel so are perfectly capable of giving 
+you unexpected motor starts if used with the wrong model.
+
+With both FlySky protocols channel 8, the one used to select the transmission mode is also transmitted as channel 8. I know this means you 
+lose the use of channel 8 but it was done to enable a greater range of transmitter to use the module. 
+
+Think that covers it.
