@@ -45,7 +45,7 @@ If you do this then approximate values for the modes are:
 +46  -> +74  Reserved           RED + GREEN
 +75  -> +100 Change module ID   RED + GREEN + YELLOW LEDS FLASHING</code>
 Binding is initiated in either of the FlySky modes by simply holding down the bind button at switch on. The orange LED
-will light to indicate bind mode. 
+will light to indicate bind mode. <br>
 As soon as it is lit you can release the bind button. The module will stay in binding mode 
 for several seconds then default to normal transmission. You have this window to bind your model.
 
