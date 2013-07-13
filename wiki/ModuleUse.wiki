@@ -17,32 +17,30 @@ in channel 8 after this time is ignored. This is a saftey feature to stop you ch
 Each mode will light a combination of LEDS to indicate which mode is in use.
 
 The approximate pulse widths and LED combos for the various modes are:
-{{{
+<code language="xml">
 1000us -> 1143us FlySky             RED
 1144us -> 1286us FlySky Mod         YELLOW
-1287us -> 1429us Hubsan             GREEN
-}}}
+1287us -> 1429us Hubsan             GREEN</code>
 Several other modes exists, some are reserved for future protocols and one we will discuss later, they are:
-{{{
+<code language="xml">
 1430us -> 1572us Reserved           RED + YELLOW
 1573us -> 1715us Reserved           YELLOW + GREEN
 1716us -> 1858us Reserved           RED + GREEN
-1859us -> 2000us Change module ID   RED + GREEN + YELLOW LEDS FLASHING
-}}}
+1859us -> 2000us Change module ID   RED + GREEN + YELLOW LEDS FLASHING</code>
 Selecting one of the reserved slots will cause the module to stop. You will need to select another mode and cycle the power to restore operation. 
 
 If using OpenTx I recommend you setup a mixer on channel 8 using MAX as the source, and the weight figure to set the position of channel 8
 and therefore the mode of the module. This then allows you to lock each model memory to the correct modulation for the model. 
 If you do this then approximate values for the modes are:
-{{{
+
+<code language="xml">
 -100 -> -71  FlySky             RED
 -70  -> -42  FlySky Mod         YELLOW
 -41  -> -13  Hubsan             GREEN
 -12  -> +16  Reserved           RED + YELLOW
 +17  -> +45  Reserved           YELLOW + GREEN
 +46  -> +74  Reserved           RED + GREEN
-+75  -> +100 Change module ID   RED + GREEN + YELLOW LEDS FLASHING
-}}}
++75  -> +100 Change module ID   RED + GREEN + YELLOW LEDS FLASHING</code>
 Binding is initiated in either of the FlySky modes by simply holding down the bind button at switch on. The orange LED
 will light to indicate bind mode, as soon as it is lit you can release the bind button. The module will stay in binding mode 
 for several seconds then default to normal transmission. You have this window to bind your model.
