@@ -18,8 +18,8 @@ If you don't want to disassemble your original transmitter you can by an RF modu
 
 As you can see the first three will plug straight into the 6 pin socket on the modules PCB and work without problem. The Syma X1 RF module as the GND and 3.3v pins 
 reversed so if you plug it in you will fry it. You can still use it but to do so you will have to omit the 6 pin socket from the build and using flying wires from the module 
-PCB to the RF pcb, and make sure you get the ordering correct.
- 
+PCB to the RF pcb, and make sure you get the ordering correct.<br>
+
 The PCB involves surface mount components. A lot of people will now be ruling this project out because they can't do surface mount ! If however you are a competent through
 hole solderer then I would say you absolutely can do surface mount. The prototype PCB was hand soldered using this lot:
 
