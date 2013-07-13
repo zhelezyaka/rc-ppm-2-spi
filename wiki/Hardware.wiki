@@ -7,8 +7,11 @@ you can obtain the components. As I am in the UK most of the links are UK based.
 The schematic and BOM is in the SVN repository. See here DevelopmentSoftware for the software to download them, and the software to view the schematic.
 
 One of the items on the BOM you may already have, the RF module itself. The original transmitters of some of the models this module is intended for contain said RF module.
-This sometimes can be removed and used in this project. For pictures and comments on this see here .....
+This sometimes can be removed and used in this project. For pictures of the various transmitter internals see the links in the table below.<br>
+
 If you don't want to disassemble your original transmitter you can by an RF module [http://www.aliexpress.com/item/A7105-Wireless-RF-2-4GHz-Transceiver-Module-3-3V-NRF24L01-SI4432-10dBm-64mA-20mA/619869938.html here] from AliExpress. It also claims to have 500 meter range, but reports have it as not quite that far.
+
+This table contains the pinouts for suitable RF modules as used in the original transmitters. Looking at the component side of the module pin 1 is left most.
 
 ||RF Module||Pin 1||2||3||4||5||6||
 ||[http://code.google.com/p/rc-ppm-2-spi/wiki/HardwareJPTwisterQuadTx JP Twister quad]||CS||CLK||IO||NA||GND||3.3v||
@@ -16,8 +19,8 @@ If you don't want to disassemble your original transmitter you can by an RF modu
 ||[http://code.google.com/p/rc-ppm-2-spi/wiki/HardwareHCW553Tx HCW553]||CS||CLK||IO||NA||GND||3.3v||
 ||[http://code.google.com/p/rc-ppm-2-spi/wiki/HardwareSymaX1Tx Syma X1]||CS||CLK||IO||NA||3.3v||GND||
 
-As you can see the first three will plug straight into the 6 pin socket on the modules PCB and work without problem. The Syma X1 RF module as the GND and 3.3v pins 
-reversed so if you plug it in you will fry it. You can still use it but to do so you will have to omit the 6 pin socket from the build and using flying wires from the module 
+The first three will plug straight into the 6 pin socket on the modules PCB and work without problem. The Syma X1 RF module has the GND and 3.3v pins 
+reversed so if you plug it in you will fry it. You can still use it but to do so you will have to omit the 6 pin socket from the build and connect to it using flying wires from the module 
 PCB to the RF pcb, and make sure you get the ordering correct.<br>
 
 The PCB involves surface mount components. A lot of people will now be ruling this project out because they can't do surface mount ! If however you are a competent through
