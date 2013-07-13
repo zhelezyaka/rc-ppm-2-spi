@@ -7,6 +7,7 @@
  * Schematic is up to date. 
  * First batch of PCB's has arrived but is scrap due to my mistake. Design files have been corrected for this mistake.
  * Currently testing the first batch of PCBs for any more mistakes, once this is done it's time to order the second batch.
+ * Perl script is working very well at condensing A7105 data into something human readable.
 
 
 *2013.03.14* 
