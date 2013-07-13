@@ -30,7 +30,10 @@ Several other modes exists, some are reserved for future protocols and one we wi
 Selecting one of the reserved slots will cause the module to stop. You will need to select another mode and cycle the power to restore operation. 
 
 If using OpenTx I recommend you setup a mixer on channel 8 using MAX as the source, and the weight figure to set the position of channel 8
-and therefore the mode of the module. This then allows you to lock each model memory to the correct modulation for the model. 
+and therefore the mode of the module. This then allows you to lock each model memory to the correct modulation for the model. Like so:
+
+<img border="0" src="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/channel8_mixer.jpg">
+
 If you do this then approximate values for the modes are:
 
 <code language="xml">
@@ -42,7 +45,8 @@ If you do this then approximate values for the modes are:
 +46  -> +74  Reserved           RED + GREEN
 +75  -> +100 Change module ID   RED + GREEN + YELLOW LEDS FLASHING</code>
 Binding is initiated in either of the FlySky modes by simply holding down the bind button at switch on. The orange LED
-will light to indicate bind mode. As soon as it is lit you can release the bind button. The module will stay in binding mode 
+will light to indicate bind mode. 
+As soon as it is lit you can release the bind button. The module will stay in binding mode 
 for several seconds then default to normal transmission. You have this window to bind your model.
 
 Binding in Hubsan mode happens at every switch on regardless of the bind button. This is a quirk of the Hubsan protocol. Again the orange LED will light to show binding is taking progress. However as the Hubsan protocol is a two way protocol the module knows when a successful binding has taken place and will only extinguish the orange LED when this has happened.
