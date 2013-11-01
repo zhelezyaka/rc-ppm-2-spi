@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 09/07/2013 21:25:35
+EESchema Schematic File Version 2
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "ppm2spi Convertor"
-Date "9 jul 2013"
+Date "1 nov 2013"
 Rev "0.1"
 Comp "Copyright Cameron Weeks <th9xer@gmail.com>"
 Comment1 "Licensed under the TAPR Open Hardware License (www.tapr.org/OHL)"
@@ -1218,7 +1218,7 @@ Bind
 Text Notes 6250 3300 0    60   ~ 0
 Alternative channel order\nCurrently unimplimented
 Text Notes 4600 5400 0    60   ~ 0
-JP2 enables alternative channel order\nAllows this module to work\nwith other transmitters\nCurrently unimplimented
+JP2 shorting this link enables\nSpektrum channel order TAER.\nLink open gives Futaba channel order AETR.
 Text Label 5000 3900 0    60   ~ 0
 Rx
 Text Label 5000 4000 0    60   ~ 0
