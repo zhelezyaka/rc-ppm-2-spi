@@ -102,10 +102,12 @@ CS_OUT();
 CS_HI();
 */
 
+
 // SPI Setup
 //No interrupts SPIE=0 , SPI Enable SPE=1, MSB first DORD=0, Master mode MSTR =1
-//Clock polarity, idle low CPOL=0, Sample leading edge CPHA=0, 16/fosc SPR1=0 SPR0=1
+//Clock polarity, idle low CPOL=0, Sample leading edge CPHA=0, fosc/2 SPR1=0 SPR0=0 SPI2X=1
 SPCR = (1<<SPE) | (1<<MSTR) | (1<<SPR0);
+SPSR |= (1<<SPI2X);
 
 // Set up for input capture on PD6
 // Normal mode, OVF @ TOP (0xFFFF), F_CPU/8, noice cancler on ICP, falling edge trigger
