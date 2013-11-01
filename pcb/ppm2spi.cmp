@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-03-19 BZR 4004)-stable date = 28/05/2013 00:21:33
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 01/11/2013 15:36:37
 
 BeginCmp
 TimeStamp = /513DD1BF;
@@ -71,23 +71,23 @@ IdModule  = SM0603;
 EndCmp
 
 BeginCmp
-TimeStamp = /513DD209;
+TimeStamp = /513DD20F;
 Reference = D1;
+ValeurCmp = G-HS;
+IdModule  = LED-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /513DD209;
+Reference = D2;
 ValeurCmp = R-FS;
 IdModule  = LED-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /513DD20C;
-Reference = D2;
-ValeurCmp = Y-FSM;
-IdModule  = LED-0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /513DD20F;
 Reference = D3;
-ValeurCmp = G-HS;
+ValeurCmp = Y-FSM;
 IdModule  = LED-0805;
 EndCmp
 
@@ -304,7 +304,7 @@ EndCmp
 BeginCmp
 TimeStamp = /513DD19F;
 Reference = U1;
-ValeurCmp = MCP1702-5v;
+ValeurCmp = XC6202P502PR;
 IdModule  = SOT89_OGI;
 EndCmp
 
@@ -319,7 +319,7 @@ BeginCmp
 TimeStamp = /513DD1F8;
 Reference = X1;
 ValeurCmp = 16Mhz;
-IdModule  = HC-18UV;
+IdModule  = HC-49V;
 EndCmp
 
 EndListe

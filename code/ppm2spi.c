@@ -14,6 +14,9 @@
  
  This file is the work of and copyright Cameron Weeks <th9xer@gmail.com>
  http://code.google.com/p/rc-ppm-2-spi/
+ 
+ Thanks to Kilrah for the Spektrum channel order implimentation
+
  */
  
 #include "common.h"
@@ -45,6 +48,7 @@ uint8_t proto_mode;
 struct Transmitter Transmitter;
 struct Model Model;
 volatile s16 Channels[NUM_OUT_CHANNELS];
+volatile uint8_t g_spektrum_order = 0;
 
 s16 chtemp;
 int main (void)
@@ -250,7 +254,8 @@ if (proto_mode == FLYSKY_MOD || proto_mode == FLYSKY_STD)
 	else
 		{FLYSKY_Cmds(PROTOCMD_INIT);}
 	}
-
+	
+if(!CH_ORD_READ()) g_spektrum_order = 1;
 while (g_initializing) ; //wait until initialization has occured before re-enabling the PPM interrupt
 gpio_clear(PORTD,LED_O);
 
@@ -274,6 +279,7 @@ ISR(TIMER1_CAPT_vect)
 gpio_set(PORTB, DEBUG_1); //High
 static uint16_t icr1_current; //static for debug
 static int16_t icr1_diff;     //static for debug
+int32_t tempch;
 
 if (g_entropy==0) {g_entropy = TCNT1;}
 
@@ -297,7 +303,27 @@ if (g_servo_count < NUM_OUT_CHANNELS)
    		icr1_diff>>=1;
    		if (icr1_diff > 2000) icr1_diff=2000;
    		if (icr1_diff < 1000) icr1_diff=1000;
-   		Channels[g_servo_count] = (int32_t)( ((icr1_diff - 1500L) * 2000L) /100L) ;
+   		tempch = (int32_t)( ((icr1_diff - 1500L) * 2000L) /100L) ;
+			
+    	if(g_spektrum_order) // TAER order
+			{
+    		switch(g_servo_count)
+				{
+    			case 0:
+    				Channels[2] = tempch;
+    				break;
+   				case 1:
+    				Channels[0] = tempch;
+    				break;
+    			case 2:
+    				Channels[1] = tempch;
+    				break;
+    			default:
+					Channels[g_servo_count] = tempch;
+				}
+			}	
+		else {Channels[g_servo_count] = tempch;}
+				
    		g_servo_count++;
    		}
 	}

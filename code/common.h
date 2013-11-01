@@ -99,6 +99,7 @@ extern const void *HUBSAN_Cmds(enum ProtoCmds cmd);
 extern volatile s16 Channels[NUM_OUT_CHANNELS];
 
 #define BIND_SW_READ() 	(PINC & (1<<BIND_SW))
+#define CH_ORD_READ()   (PINC & (1<<CH_ORD))
 
 #define SPI2 2
 
