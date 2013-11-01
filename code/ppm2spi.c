@@ -106,6 +106,7 @@ CS_HI();
 // SPI Setup
 //No interrupts SPIE=0 , SPI Enable SPE=1, MSB first DORD=0, Master mode MSTR =1
 //Clock polarity, idle low CPOL=0, Sample leading edge CPHA=0, fosc/2 SPR1=0 SPR0=0 SPI2X=1
+//Thanks Rick for the tip that fosc/2 worked ok !
 SPCR = (1<<SPE) | (1<<MSTR) | (1<<SPR0);
 SPSR |= (1<<SPI2X);
 

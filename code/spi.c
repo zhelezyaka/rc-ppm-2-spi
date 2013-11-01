@@ -35,8 +35,22 @@ void spi_set_unidirectional_mode(u8 spi)
 
 u8 spi_read(u8 spi)
 {
+
+  // While we are reading data in if MOSI is left to be pulled to GND the A7105 sees a
+  // 666 ohm load. If we turn MOSI into a floating input during this time the A7105
+  // only sees a 2k load, much nicer. Thanks Rick !
+  
+  // Set MOSI as input.
+  DDRB &= ~(1<<DDB3); // MOSI.
+  // disable pullup
+  PORTB &= ~(1<<PORTB3);
+
   SPDR = 0;
   while (!(SPSR & (1<<SPIF)));
+
+  // Set MOSI as output.
+  DDRB |= (1<<DDB3); // MOSI.
+
   return SPDR;
 }
 
