@@ -292,12 +292,24 @@ g_icr1_previous = icr1_current;
 
 if (g_servo_count < NUM_OUT_CHANNELS)
 	{
-	if (icr1_diff > 6000) 
+	
+	// > 3.0ms pulse seen as a frame sync
+	if (icr1_diff > 6000)
    		{
    		g_servo_count=0;
    		g_need_to_sync = 0;
    		g_sync_count++;
    		}
+		
+	// Under pulse width check suggested by Rick
+	// < 0.7ms pulse seen as glitch	
+	else if (icr1_diff < 1400) 
+		{
+		g_servo_count =0;
+		g_need_to_sync =1;
+		}
+		
+	// Pulse within limits and we don't need to sync.	
 	else if (!g_need_to_sync)
    		{
    		//1500us is servo centre pulse width
