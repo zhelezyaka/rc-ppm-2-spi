@@ -300,15 +300,7 @@ if (g_servo_count < NUM_OUT_CHANNELS)
    		g_need_to_sync = 0;
    		g_sync_count++;
    		}
-		
-	// Under pulse width check suggested by Rick
-	// < 0.7ms pulse seen as glitch	
-	else if (icr1_diff < 1400) 
-		{
-		g_servo_count =0;
-		g_need_to_sync =1;
-		}
-		
+
 	// Pulse within limits and we don't need to sync.	
 	else if (!g_need_to_sync)
    		{
@@ -316,8 +308,8 @@ if (g_servo_count < NUM_OUT_CHANNELS)
    		//2000L is CHAN_MAX_VALUE / 500us (max deviation from 1500us) * 100 (scaling)
    		//100L undoes the scaling
    		icr1_diff>>=1;
-   		if (icr1_diff > 2000) icr1_diff=2000;
-   		if (icr1_diff < 1000) icr1_diff=1000;
+   		if (icr1_diff > 2000) icr1_diff=2000; // Range limiting
+   		if (icr1_diff < 1000) icr1_diff=1000; // Range limiting
    		tempch = (int32_t)( ((icr1_diff - 1500L) * 2000L) /100L) ;
 			
     	if(g_spektrum_order) // TAER order
@@ -337,7 +329,8 @@ if (g_servo_count < NUM_OUT_CHANNELS)
 					Channels[g_servo_count] = tempch;
 				}
 			}	
-		else {Channels[g_servo_count] = tempch;}
+			
+		else {Channels[g_servo_count] = tempch;}  //AETR order
 				
    		g_servo_count++;
    		}
