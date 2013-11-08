@@ -1,8 +1,8 @@
 (export (version D)
   (design
     (source "Z:/Dev/Micro_Avr/model - jp twister quad tx/rc-ppm-2-spi/trunk/pcb/ppm2spi.sch")
-    (date "09/07/2013 21:25:32")
-    (tool "eeschema (2013-03-19 BZR 4004)-stable"))
+    (date "08/11/2013 19:47:54")
+    (tool "eeschema (2013-07-07 BZR 4022)-stable"))
   (components
     (comp (ref P5)
       (value CONN_2)
@@ -180,7 +180,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 513DD1A2))
     (comp (ref U1)
-      (value XC6202P502PR)
+      (value MCP1703AT-5002E/MB)
       (libsource (lib regul) (part 7805))
       (sheetpath (names /) (tstamps /))
       (tstamp 513DD19F))
@@ -475,12 +475,12 @@
       (pins
         (pin (num 1) (name ~) (type input)))))
   (libraries
+    (library (logical regul)
+      (uri "C:\\Program Files\\KiCad\\share\\library\\regul.lib"))
     (library (logical device)
       (uri "C:\\Program Files\\KiCad\\share\\library\\device.lib"))
     (library (logical conn)
       (uri "C:\\Program Files\\KiCad\\share\\library\\conn.lib"))
-    (library (logical regul)
-      (uri "C:\\Program Files\\KiCad\\share\\library\\regul.lib"))
     (library (logical ppm2spi)
       (uri share\library\ppm2spi.lib))
     (library (logical atmel)
