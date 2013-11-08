@@ -41,7 +41,7 @@ Date "8 nov 2013"
 Rev "0.1"
 Comp "Copyright Cameron Weeks <th9xer@gmail.com>"
 Comment1 "Licensed under the TAPR Open Hardware License (www.tapr.org/OHL)"
-Comment2 ""
+Comment2 "http://code.google.com/p/rc-ppm-2-spi/"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -737,7 +737,7 @@ L 7805 U1
 U 1 1 513DD19F
 P 8600 1600
 F 0 "U1" H 8750 1404 60  0000 C CNN
-F 1 "XC6202P502PR" H 8600 1800 60  0000 C CNN
+F 1 "MCP1703AT-5002E/MB" H 8600 1900 60  0000 C CNN
 F 2 "" H 8600 1600 60  0001 C CNN
 F 3 "" H 8600 1600 60  0001 C CNN
 	1    8600 1600
