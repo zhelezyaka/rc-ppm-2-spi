@@ -37,7 +37,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "ppm2spi Convertor"
-Date "1 nov 2013"
+Date "8 nov 2013"
 Rev "0.1"
 Comp "Copyright Cameron Weeks <th9xer@gmail.com>"
 Comment1 "Licensed under the TAPR Open Hardware License (www.tapr.org/OHL)"
@@ -1216,9 +1216,9 @@ Connection ~ 6950 2800
 Text Notes 6250 3600 0    60   ~ 0
 Bind
 Text Notes 6250 3300 0    60   ~ 0
-Alternative channel order\nCurrently unimplimented
+Alternative channel order
 Text Notes 4600 5400 0    60   ~ 0
-JP2 shorting this link enables\nSpektrum channel order TAER.\nLink open gives Futaba channel order AETR.
+Alternative channel order\nJP2 shorting this link enables\nSpektrum channel order TAER.\nLink open gives Futaba channel order AETR.
 Text Label 5000 3900 0    60   ~ 0
 Rx
 Text Label 5000 4000 0    60   ~ 0
