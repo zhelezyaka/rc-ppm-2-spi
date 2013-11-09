@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 2 date 08/11/2013 23:58:58
+PCBNEW-BOARD Version 2 date 09/11/2013 00:05:43
 
 # Created by Pcbnew(2013-07-07 BZR 4022)-stable
 
@@ -7,12 +7,11 @@ encoding utf-8
 Units mm
 LayerCount 2
 EnabledLayers 1FFF8001
-VisibleLayers 1FFF8000
 Links 109
 NoConn 0
 Di 94.97568 57.12968 137.485121 113.543081
 Ndraw 19
-Ntrack 560
+Ntrack 563
 Nzone 0
 BoardThickness 1.6002
 Nmodule 46
@@ -22,7 +21,7 @@ $EndGENERAL
 $SHEETDESCR
 Sheet A4 11693 8268
 Title "ppm2spi convertor"
-Date "8 nov 2013"
+Date "9 nov 2013"
 Rev "0.1"
 Comp "Copyright Cameron Weeks <th9xer@gmail.com>"
 Comment1 "Licensed under the TAPR Open Hardware License (www.tapr.org/OHL)"
@@ -3129,6 +3128,12 @@ Po 0 105.82656 91.10472 104.33304 91.10472 0.2032 -1
 De 15 0 21 51898BB5 0
 Po 0 106.1466 91.42476 105.82656 91.10472 0.2032 -1
 De 15 0 21 51898BB4 0
+Po 0 125.35408 71.63308 125.44552 71.63308 0.7493 -1
+De 15 0 22 0 0
+Po 3 125.79604 71.28256 125.79604 71.28256 0.889 -1
+De 15 1 22 0 0
+Po 0 125.44552 71.63308 125.79604 71.28256 0.7493 -1
+De 15 0 22 527D7C27 0
 Po 0 126.7206 100.584 126.62916 100.584 0.7493 -1
 De 15 0 22 0 0
 Po 3 126.11608 101.09708 126.11608 101.09708 0.889 -1
