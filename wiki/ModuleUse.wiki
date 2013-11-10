@@ -1,5 +1,7 @@
 #summary Instructions for use of the module
 
+See modelsetups for some pre done opentx model setup files.
+
 =PPM Setup=
 
 The module takes a negative PPM signal with 1000us as bottom stick and 2000us as top stick. With 1500us being treated as centre. Please set your transmitter according.
@@ -73,23 +75,26 @@ If you wish to change this ID to another randomly chosen one then:
  * Press and hold the bind button until the RED + GREEN + YELLOW leds remain solid on. This confirms the change.
  * As soon as you release the button the module will reboot and lock the change in.
 
-=Extra features of FlySky mode for various quadcopters=
+=Extra features of "FlySky mode for various quadcopters"=
 
 The FlySky mode that is modified for various quadcopters has some extra features.
 
-Setting channel 5 above 1540us sets bit 13 of the rudder channel 
-On my JP Twister Quad with toggles the LEDS
+ * Setting channel 5 above 1540us sets bit 13 of the rudder channel. On my JP Twister Quad with toggles the LEDS
 
-Setting channel 6 above 1540us sets bit 14 of the throttle channel
-Apparently this toggle the use of the video camera on some machines. (I have not tested this)
+ * Setting channel 6 above 1540us sets bit 14 of the throttle channel Apparently this toggles the use of the video camera on some machines. (I have not tested this)
 
-Setting channel 7 above 1540us sets bit 15 of the throttle channel
-Apparently this toggle the use of the still camera on some machines. (I have not tested this)
+ * Setting channel 7 above 1540us sets bit 15 of the throttle channel. Apparently this toggles the use of the still camera on some machines. (I have not tested this)
 
 Be very careful when playing with channel 6 and 7, as you can see they effect the throttle channel so are perfectly capable of giving 
 you unexpected motor starts if used with the wrong model.
 
 With both FlySky protocols channel 8, the one used to select the transmission mode is also transmitted as channel 8. I know this means you 
 lose the use of channel 8 but it was done to enable a greater range of transmitter to use the module. 
+
+=Extra Features of the Hubsan protocol=
+
+ * Setting channel 5 above 1540us will switch the LEDs on.
+
+ * Setting channel 6 above 1540us will enable the flip inhibit mode.
 
 Think that covers it.
