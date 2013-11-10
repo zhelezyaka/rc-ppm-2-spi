@@ -51,11 +51,6 @@ software to download it and view it. <br>
 <b>A: </b>They currently just toggle to show various timing within the software, 
 for use on an oscilloscope.<br>
 <br>
-<b>Q: Why in the schematics the RX/PD0 pin is tied to ICP1/PB0 ?</b><br>
-<b>A: </b>To allow a more advanced serial protocol to talk to the module. Note 
-the schematics are in a state of flux right now, and this feature might never 
-get implemented in software.<br>
-<br>
 <b>Q: When will PCBs be available.</b><br>
 <b>A:</b> I have had the first batch of PCB's but due to my error they are 
 scrap. Once I am convinced there are no more errors on the PCB I will order a 
