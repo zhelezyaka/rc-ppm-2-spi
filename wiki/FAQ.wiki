@@ -43,9 +43,11 @@ port over, but to test it I would still need a sample of the model in question.
 The code can be ported without testing but runs a high risk of being useless, to 
 the point where it is not worth spending time on it in the first place.<br>
 <br>
-<b>Q: Where is the schematic and BOM</b><br>
+<b>Q: Where is the schematic, BOM, or firmware HEX</b><br>
 <b>A:</b> It's in the SVN repository, see wiki page DevelopmentSoftware for the 
 software to download it and view it. <br>
+<b>A:</b> Or check the project home page for some direct links to the files.
+<br>
 <br>
 <b>Q: How would one use the DEBUG1/DEBUG2 pins ?</b><br>
 <b>A: </b>They currently just toggle to show various timing within the software, 
