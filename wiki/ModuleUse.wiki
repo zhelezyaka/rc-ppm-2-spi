@@ -1,6 +1,6 @@
 #summary Instructions for use of the module
 
-See [Modelsetups] for some pre done opentx model setup files.
+See [ModelSetups] for some pre done opentx model setup files.
 
 =PPM Setup=
 
