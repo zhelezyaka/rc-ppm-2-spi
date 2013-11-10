@@ -45,12 +45,18 @@
 #endif
 #ifdef PROTO_HAS_A7105
 
+enum{
+    FLAG_FLIP = 0x08,
+    FLAG_LED  = 0x04
+};
+
 static u8 packet[16];
 static u8 channel;
 static const u8 allowed_ch[] = {0x14, 0x1e, 0x28, 0x32, 0x3c, 0x46, 0x50, 0x5a, 0x64, 0x6e, 0x78, 0x82};
 static u32 sessionid;
 static const u32 txid = 0xdb042679;
 static u8 state;
+static u8 packet_count;
 enum {
     BIND_1,
     BIND_2,
@@ -186,7 +192,20 @@ static void hubsan_build_packet()
     packet[4] = 0xff - get_channel(3, 0x80, 0x80, 0x80); //Rudder is reversed
     packet[6] = 0xff - get_channel(1, 0x80, 0x80, 0x80); //Elevator is reversed
     packet[8] = get_channel(0, 0x80, 0x80, 0x80);
-    packet[9] = 0x02;
+    if(packet_count < 100)
+    {
+        packet[9] = 0x02 | FLAG_LED | FLAG_FLIP; // sends default value for the 100 first packets
+        packet_count++;
+    }
+    else
+    {
+	    // On threshold set as 400 = 1500us + 20us, so 20us above centre
+        packet[9] = 0x02;
+        if(Channels[4] >= 400)
+            packet[9] |= FLAG_LED;
+        if(Channels[5] >= 400)
+            packet[9] |= FLAG_FLIP;
+    }
     packet[10] = 0x64;
     packet[11] = (txid >> 24) & 0xff;
     packet[12] = (txid >> 16) & 0xff;
@@ -281,6 +300,7 @@ static void initialize() {
     channel = allowed_ch[rand() % sizeof(allowed_ch)];
     PROTOCOL_SetBindState(0xFFFFFFFF);
     state = BIND_1;
+    packet_count=0;
     CLOCK_StartTimer(10000, hubsan_cb);
 }
 
@@ -291,8 +311,8 @@ const void *HUBSAN_Cmds(enum ProtoCmds cmd)
         case PROTOCMD_DEINIT: return 0;
         case PROTOCMD_CHECK_AUTOBIND: return (void *)1L; //Always autobind
         case PROTOCMD_BIND:  initialize(); return 0;
-        case PROTOCMD_NUMCHAN: return (void *)4L;
-        case PROTOCMD_DEFAULT_NUMCHAN: return (void *)4L;
+        case PROTOCMD_NUMCHAN: return (void *)6L;
+        case PROTOCMD_DEFAULT_NUMCHAN: return (void *)6L;
         case PROTOCMD_CURRENT_ID: return 0;
         case PROTOCMD_TELEMETRYSTATE: return (void *)(long)-1;
         default: break;
