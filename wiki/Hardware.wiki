@@ -55,4 +55,9 @@ The pin pitch of the processor is large enough that you can easily solder it pin
 
 Use the loupe to examine your joints in detail as you see fit.
 
-Use the solder braid to remove any solder bridges .
+Use the solder braid to remove any solder bridges.
+
+Here are a couple of videos of myself doing some SMT soldering. They feature the Gruvin9x replacement PCB for the 9x transmitter, but the techniques are the same. As mentioned you can solder the whole ppm-2-spi board pin by pin, so the first video is probably more use.
+
+<wiki:video url="http://www.youtube.com/watch?v=nMZq0CZ67WY"/>
+<wiki:video url="http://www.youtube.com/watch?v=r69WvRybgCU"/>
