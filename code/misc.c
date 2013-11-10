@@ -33,7 +33,7 @@ u16 (*timer_callback)(void);
 void PROTOCOL_SetBindState(u32 msec)
 {
 // Edit by Cam - Commented out
-// This funstion appears to relay information back to the user about binding
+// This function appears to relay information back to the user about binding
 // It's seems to just set a delay and display a "binding" message on the LCD
 // For that duration. We don't have an LCD so it's commented out for now. May
 // impliment in the future if needed with a LED for feedback. 
@@ -56,15 +56,15 @@ void CLOCK_StartTimer(u16 us, u16 (*cb)(void))
         return;
     timer_callback = cb;
     /* Set the capture compare value for OC1. */
-    OCR0A = TCNT1 + (us<<1);
+    OCR1A = TCNT1 + (us<<1);
 	// Enable Output-Compare interrrupts
-	TIMSK1 |= (1<<OCIE0A); 
+	TIMSK1 |= (1<<OCIE1A); 
 
 }
 
 void CLOCK_StopTimer() {
 	// Disable Output-Compare interrrupts
-	TIMSK1 &= ~(1<<OCIE0A);
+	TIMSK1 &= ~(1<<OCIE1A);
     timer_callback = NULL;
 }
 
