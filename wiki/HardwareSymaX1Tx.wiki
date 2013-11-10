@@ -2,6 +2,8 @@
 
 Some pictures of the Syma X1 transmitter and the RF Module. Click for a close up.
 
+* You cannot use this module directly as the polarity pins are reversed. You need to connect it using flying wires.*
+
 <a href="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/syma-x1/syma-x1-1.jpg">
 <img border="0" src="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/syma-x1/syma-x1-1_sml.jpg">
 
