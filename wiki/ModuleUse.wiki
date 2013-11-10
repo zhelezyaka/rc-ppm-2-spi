@@ -1,18 +1,23 @@
 #summary Instructions for use of the module
 
-The module takes 1000us as bottom stick and 2000us as top stick. With 1500us being treated as center. Please set your transmitter according.
+=PPM Setup=
+
+The module takes a negative PPM signal with 1000us as bottom stick and 2000us as top stick. With 1500us being treated as centre. Please set your transmitter according.
 If the module detects pulses outside these ranges it will limit them to between 1000us and 2000us
 
-Correct channel order is: AIL ELE THR RUD
+Correct channel order with JP2 open is: AIL ELE THR RUD <br>
+Correct channel order with link JP2 closed is: THR AIL ELV RUD
+
+=Module Protocol Selection=
 
 The module can operate in three modulation modes, they are:
 
-FlySky<br>
-FlySky modified for various quadcopters<br>
-Hubsan X4<br>
+ * FlySky
+ * FlySky modified for various quadcopters
+ * Hubsan X4
 
 Which mode is selected is controlled by the position of channel 8 at the time of switch on. Any change 
-in channel 8 after this time is ignored. This is a saftey feature to stop you changing mode mid flight.
+in channel 8 after this time is ignored. This is a safety feature to stop you changing mode mid flight.
 
 Each mode will light a combination of LEDS to indicate which mode is in use.
 
@@ -44,12 +49,17 @@ If you do this then approximate values for the modes are:
 +17  -> +45  Reserved           YELLOW + GREEN
 +46  -> +74  Reserved           RED + GREEN
 +75  -> +100 Change module ID   RED + GREEN + YELLOW LEDS FLASHING</code>
+
+=Binding=
+
 Binding is initiated in either of the FlySky modes by simply holding down the bind button at switch on. The orange LED
 will light to indicate bind mode. <br>
 As soon as it is lit you can release the bind button. The module will stay in binding mode 
 for several seconds then default to normal transmission. You have this window to bind your model.
 
 Binding in Hubsan mode happens at every switch on regardless of the bind button. This is a quirk of the Hubsan protocol. Again the orange LED will light to show binding is taking progress. However as the Hubsan protocol is a two way protocol the module knows when a successful binding has taken place and will only extinguish the orange LED when this has happened.
+
+=Module ID=
 
 The ID for the module is chosen randomly the first time you switch it on. It is then stored in the processors internal EEPROM and used from then on. If you wish to keep this ID at subsequent re-flashing of the firmware you need to enable the EESAVE fuse on the ATMEGA.
 
@@ -62,6 +72,8 @@ If you wish to change this ID to another randomly chosen one then:
  * Next set channel 8 to represent the mode you wish the module to be in for the model you are flying (doing this now will save you another power cycle). ID is still unchanged at this point.
  * Press and hold the bind button until the RED + GREEN + YELLOW leds remain solid on. This confirms the change.
  * As soon as you release the button the module will reboot and lock the change in.
+
+=Extra features of FlySky mode for various quadcopters=
 
 The FlySky mode that is modified for various quadcopters has some extra features.
 
