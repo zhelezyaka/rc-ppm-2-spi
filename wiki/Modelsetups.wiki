@@ -1,1 +1,0 @@
-#summary Some model setup files for use with openTx
