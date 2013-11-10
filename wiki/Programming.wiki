@@ -2,7 +2,7 @@
 
 Once you have the module built you need to flash the firmware. The pre-compiled firmware is already available in the SVN repository, it's called <a href="http://rc-ppm-2-spi.googlecode.com/svn/trunk/code/default/ppm2spi.hex">ppm2spi.hex.</a> <br>
 
-You will need an AVR programmer such as the Atmel AVR ISP MkII http://www.atmel.com/tools/AVRISPMKII.aspx usually about 30GBP, you can then use AVR Studio to flash the firmware. 
+You will need an AVR programmer such as the Atmel AVR ISP MkII http://www.atmel.com/tools/AVRISPMKII.aspx usually about 30GBP, you can then use <a href="http://www.atmel.com/tools/STUDIOARCHIVE.aspx">AVR Studio version 4.xx</a> to flash the firmware. 
 
 I know I lot of much cheaper programmers are available http://www.hobbyking.com/hobbyking/store/uh_viewitem.asp?idproduct=21321 and you can use AVRDude http://download.savannah.gnu.org/releases/avrdude/ with them. But I have never been a fan, so this guide won't show them.
 
