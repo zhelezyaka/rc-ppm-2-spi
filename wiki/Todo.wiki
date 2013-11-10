@@ -2,4 +2,3 @@
 
  * Implement error time outs in the binding stages of the protocols.
  * Decode the JP Nanostik protocol, the perl script will help here.
- * Add page describing perl script use
