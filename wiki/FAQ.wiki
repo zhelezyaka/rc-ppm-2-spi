@@ -5,10 +5,10 @@
 aircraft (that will usually only work with the transmitter they are supplied 
 with) on any transmitter that will take a JR module.<br>
 
-<b>Q: Does it support Spektrum, or Walkera, or Nine Eagles, or FrSky, or V202, or Skyartec protocols</b><br>
+<b>Q: Does it support Spektrum, or Walkera, or Nine Eagles, or FrSky, or V202, or Skyartec protocols ?</b><br>
 <b>A:</b> No, the hardware can't do these protocols.
 
-<b>Q: Can I use an RF module with the CC2500 chip, or the CYRF6936 chip, or the NRF24L01 chip</b><br>
+<b>Q: Can I use an RF module with the CC2500 chip, or the CYRF6936 chip, or the NRF24L01 chip ?</b><br>
 <b>A:</b> No, only the A7105 chip.<br>
 
 <b>Q: Does it use Arduino ?</b><br>
@@ -49,7 +49,7 @@ the point where it is not worth spending time on it in the first place.<br>
 <b>A:</b> I personally have no need for other chipsets at the minute so right 
 now it's zero priority.<br>
 <br>
-<b>Q: Where is the schematic, BOM, or firmware HEX</b><br>
+<b>Q: Where is the schematic, BOM, or firmware HEX ?</b><br>
 <b>A:</b> It's in the SVN repository, see wiki page DevelopmentSoftware for the 
 software to download it and view it. <br>
 <b>A:</b> Or check the project home page for some direct links to the files.
@@ -59,11 +59,11 @@ software to download it and view it. <br>
 <b>A: </b>They currently just toggle to show various timing within the software, 
 for use on an oscilloscope.<br>
 <br>
-<b>Q: When will PCBs be available.</b><br>
+<b>Q: When will PCBs be available ?</b><br>
 <b>A:</b> I have had the first batch of PCB's but due to my error they are 
 scrap. Once I am convinced there are no more errors on the PCB I will order a 
-second batch. Maybe another week. The last lot took about 3 weeks to arrive from 
-ordering. So that gives 4 weeks total, ish.<br>
+second batch. Maybe early November 2013. The last lot took about 3 weeks to arrive from 
+ordering.<br>
 <br>
 <b>Q: How much for a PCB ?</b><br>
 <b>A: </b>Not sure yet, not much, around 5-6 GBP each I imagine.<br>
