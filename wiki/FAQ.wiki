@@ -5,6 +5,12 @@
 aircraft (that will usually only work with the transmitter they are supplied 
 with) on any transmitter that will take a JR module.<br>
 
+<b>Q: Does it support Spektrum, or Walkera, or Nine Eagles, or FrSky protocols</b><br>
+<b>A:</b> No, the hardware can't do these protocols.
+
+<b>Q: Can I use an RF module with the CC2500 chip, or the CYRF6936 chip, or the NRF24L01 chip</b><br>
+<b>A:</b> No, only the A7105 chip.<br>
+
 <b>Q: Does it use Arduino ?</b><br>
 <b>A:</b> No. For early development I use an ATMega that happened to be on an Arduino board, but no Arduino code was or is used. No bootloader, no anything. <br>
 
@@ -31,17 +37,17 @@ one of the models to examine. ** SEE NOTE BELOW<br>
 <b>Q: But I don't know any programming or electronics.</b><br>
 <b>A: </b>Probably still quicker to do it yourself :)<br>
 <br>
-<b>Q: What about supporting other chipsets ?</b><br>
-<b>A:</b> I personally have no need for other chipsets at the minute so right 
-now it's low priority. <b>** SEE NOTE BELOW</b><br>
-<br>
 <b>** NOTE</b><br>
-If however the protocol and chipset code already exists in deviation firmware
+If however the protocol code already exists in deviation firmware
 <a href="https://bitbucket.org/PhracturedBlue/deviation/overview">
 https://bitbucket.org/PhracturedBlue/deviation/overview</a> it is much easier to 
 port over, but to test it I would still need a sample of the model in question. 
 The code can be ported without testing but runs a high risk of being useless, to 
 the point where it is not worth spending time on it in the first place.<br>
+<br>
+<b>Q: What about supporting other chipsets ?</b><br>
+<b>A:</b> I personally have no need for other chipsets at the minute so right 
+now it's zero priority.<br>
 <br>
 <b>Q: Where is the schematic, BOM, or firmware HEX</b><br>
 <b>A:</b> It's in the SVN repository, see wiki page DevelopmentSoftware for the 
