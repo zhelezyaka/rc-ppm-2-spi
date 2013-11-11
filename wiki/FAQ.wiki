@@ -5,7 +5,7 @@
 aircraft (that will usually only work with the transmitter they are supplied 
 with) on any transmitter that will take a JR module.<br>
 
-<b>Q: Does it support Spektrum, or Walkera, or Nine Eagles, or FrSky protocols</b><br>
+<b>Q: Does it support Spektrum, or Walkera, or Nine Eagles, or FrSky, or V202 protocols</b><br>
 <b>A:</b> No, the hardware can't do these protocols.
 
 <b>Q: Can I use an RF module with the CC2500 chip, or the CYRF6936 chip, or the NRF24L01 chip</b><br>
