@@ -12,7 +12,7 @@ with) on any transmitter that will take a JR module.<br>
 <b>A:</b> No, only the A7105 chip.<br>
 
 <b>Q: Does it use Arduino ?</b><br>
-<b>A:</b> No. For early development I use an ATMega that happened to be on an Arduino board, but no Arduino code was or is used. No bootloader, no anything. <br>
+<b>A:</b> No. For early development I used an ATMega that happened to be on an Arduino board, but no Arduino code was or is used. No bootloader, no anything. <br>
 
 <b>Q: What models does it work with ?</b><br>
 <b>A:</b> Personally tested with Hubsan X4, JP Twister Quad.<br>
