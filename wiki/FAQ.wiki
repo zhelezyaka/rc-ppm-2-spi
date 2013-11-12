@@ -60,10 +60,7 @@ software to download it and view it. <br>
 for use on an oscilloscope.<br>
 <br>
 <b>Q: When will PCBs be available ?</b><br>
-<b>A:</b> I have had the first batch of PCB's but due to my error they are 
-scrap. Once I am convinced there are no more errors on the PCB I will order a 
-second batch. Maybe early November 2013. The last lot took about 3 weeks to arrive from 
-ordering.<br>
+<b>A:</b> Second batch of PCBs have just been ordered 2013.Nov.12. So hopefully in about 3 weeks they will be with me.<br>
 <br>
 <b>Q: How much for a PCB ?</b><br>
 <b>A: </b>Not sure yet, not much, around 5-6 GBP each I imagine.<br>
