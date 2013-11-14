@@ -58,19 +58,3 @@ software to download it and view it. <br>
 <b>Q: How would one use the DEBUG1/DEBUG2 pins ?</b><br>
 <b>A: </b>They currently just toggle to show various timing within the software, 
 for use on an oscilloscope.<br>
-<br>
-<b>Q: When will PCBs be available ?</b><br>
-<b>A:</b> Second batch of PCBs have just been ordered 2013.Nov.12. So hopefully in about 3 weeks they will be with me.<br>
-<br>
-<b>Q: How much for a PCB ?</b><br>
-<b>A: </b>Not sure yet, not much, around 5-6 GBP each I imagine.<br>
-<br>
-<b>Q: How much for postage ?</b><br>
-<b>A: </b>I'll have to check weights and get back to you. I will keep it simple 
-and offer one cost regardless of location. Can't imagine much more than 3-4 GBP<br>
-<br>
-<b>Q: Can I get one ready soldered ?</b><br>
-<b>A:</b> No, sorry.<br>
-<br>
-<b>Q: Can I get a kit ?</b><br>
-<b>A: </b>No, sorry.
