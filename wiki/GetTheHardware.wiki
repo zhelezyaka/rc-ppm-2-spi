@@ -11,7 +11,7 @@ I am only selling PCBs. You will have to source the parts and assemble it yourse
 <b>A: </b>5.00GBP each.<br>
 <br>
 <b>Q: How much for postage ?</b><br>
-<b>A: </b>All prices are for up to 8 boards:<br>
+<b>A: </b>All prices are for up to 8 boards per parcel:<br>
  * *UK:* Royal mail 1st class post: 1.80GBP
  * *UK:* Royal mail 1st class signed for: 2.90GBP
  * *International:* Royal mail airmail small packet 4.20GBP
