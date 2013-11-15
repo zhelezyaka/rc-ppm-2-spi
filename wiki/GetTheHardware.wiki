@@ -1,5 +1,7 @@
 #summary Details about what's for sale
 
+*NOTE: Everyone on openrcforums your PCB reservation as already logged as per the role call*
+
 I am only selling PCBs. You will have to source the parts and assemble it yourself. PCB's will be double sided and professionally made. The rest of this wiki contains details to get you on the right track with this.
 
 <b>Q: When will PCBs be available ?</b><br>
