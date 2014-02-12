@@ -1,6 +1,6 @@
 #summary Using the perl script for decoding A7105 communication
 
-You are going to need one of these <a href="http://www.saleae.com/logic/">logic analysers</a> and an <a href="http://www.perl.org/get.html">install of perl.<a>
+You are going to need one of these <a href="http://www.saleae.com/logic/">logic analysers</a> an <a href="http://www.perl.org/get.html">install of perl<a> and this <a href="http://rc-ppm-2-spi.googlecode.com/svn/trunk/spi_parser/decode.pl">script</a>
 
 I will presume you know how to install perl and use your logic analyser.
 
