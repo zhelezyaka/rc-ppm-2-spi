@@ -1,12 +1,12 @@
 #summary Details about what's for sale
 
-*NOTE: Everyone on openrcforums your PCB reservation as already logged as per the [http://openrcforums.com/forum/viewtopic.php?f=5&t=2672&p=59690#p59690 role call]*
-
 I am only selling PCBs. You will have to source the parts and assemble it yourself. PCB's will be double sided and professionally made. The rest of this wiki contains details to get you on the right track with this.
 
 <b>Q: When will PCBs be available ?</b><br>
-<b>A:</b> *Now.* Once everyone I agreed to send one out to on the [http://openrcforums.com/forum/viewtopic.php?f=5&t=2672&p=59690#p59690 openrcforums] site has been satisfied I will add a Paypal button here. <br>
-<br>
+<b>A:</b> *Now.* I was going to add a Paypal button here but Paypal what business details and all sorts of complicated kak so instead just email the address in this picture and I will send you a Paypal request for the funds. Click on the pic for a larger version. <br><br>
+<a href="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/overview/overview_03.jpg">
+<img border="0" src="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/overview/overview_03_sml.jpg"> <a>
+<br><br>
 <b>Q: How much for a PCB ?</b><br>
 <b>A: </b>4.00GBP each.<br>
 <br>
@@ -26,5 +26,5 @@ Other than adding 1.00GBP for a jiffy bag these are the actual postage prices I 
 <b>Q: Can I get a kit ?</b><br>
 <b>A: </b>No, sorry.<br>
 <br>
-<b>Q: Where are the Gerber file ?</b><br>
+<b>Q: Where are the Gerber files ?</b><br>
 <b>A: </b><a href="http://rc-ppm-2-spi.googlecode.com/svn/trunk/pcb/production/2013.11.09_ppm2spi_001.zip">Here</a>
