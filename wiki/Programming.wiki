@@ -10,11 +10,11 @@ Just follow the pics:
 
 <a href="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/prog/prog_01.jpg">
 <img border="0" src="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/prog/prog_01_sml.jpg"> <a>
-<br>Connect things up and power up.<br>
+<br>Connect things up and power up. Observe correct ISP connector orientation.<br> *NOTE this first time you flash your module no leds will be on, they are only on in the pic as this module has been flashed before*<br>
 
 <a href="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/prog/prog_02.jpg">
 <img border="0" src="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/prog/prog_02_sml.jpg"> <a>
-<br>Connector orientation.<br>
+<br><br>
 
 <a href="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/prog/prog_03.jpg">
 <img border="0" src="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/prog/prog_03_sml.jpg"> <a>
