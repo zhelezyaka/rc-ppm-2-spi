@@ -2,6 +2,8 @@
 
 = In date order, newest first =
 
+*2014.04.09* <br><br> PCBs are available !
+
 *2014.02.16* <br><br> PCB's got caught up in the whole Hong Kong LiPo postage problem, but they are here and tested now. People that asked for one have been informed, and they are ready to send out.
 
 *2013.12.05*<br><br> Not looking good, checked the tracking number for the Mk2 PCB parcel and it says "The item is being returned to sender through the acceptance office". I have contacted the PCB fab and asked them to check it out.
