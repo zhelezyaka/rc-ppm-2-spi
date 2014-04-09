@@ -1,6 +1,6 @@
 #summary Credits
 
- * Thanks to PhracturedBlue for the original protocol decodes https://bitbucket.org/PhracturedBlue/deviation/overview and http://www.deviationtx.com/ I personally would love to hear more about your adventures in protocol decoding, I read a snippet from you that hinted toward Arduino and Raspberry pi use, sounded very interesting.
+ * Thanks to PhracturedBlue for the original protocol decodes https://bitbucket.org/PhracturedBlue/deviation/overview and http://www.deviationtx.com/ I personally would love to hear more about your adventures in protocol decoding, I read a snippet from you that hinted toward Arduino and Raspberry pi use, sounded very interesting. EDIT: I got some info from him :) See <a href="http://www.deviationtx.com/forum/protocol-development/2773-teach-us-your-protocol-reversing-tricks-oh-wise-pb#20154">here</a>
 
  * Thanks to TheObstical over on openrcforums for the original seed that lead to this project, and offering up a lot of the protocol information that convinced me it might not be that big a job after all and for some of the Wiki photos.
 
