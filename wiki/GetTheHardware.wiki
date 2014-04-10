@@ -3,7 +3,7 @@
 I am only selling PCBs. You will have to source the parts and assemble it yourself. PCB's will be double sided and professionally made. The rest of this wiki contains details to get you on the right track with this.
 
 <b>Q: When will PCBs be available ?</b><br>
-<b>A:</b> *Now.* I was going to add a Paypal button here but Paypal what business details and all sorts of complicated kak so instead just email the address in this picture and I will send you a Paypal request for the funds. Click on the pic for a larger version. <br><br>
+<b>A:</b> *Now.* I was going to add a Paypal button here but Paypal want business details and all sorts of complicated kak so instead just email the address in this picture and I will send you a Paypal request for the funds. Click on the pic for a larger version. <br><br>
 <a href="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/overview/overview_03.jpg">
 <img border="0" src="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/overview/overview_03_sml.jpg"> <a>
 <br><br>
