@@ -22,12 +22,13 @@ Postage costs are:
  * *International:* Royal mail airmail small packet 4.20GBP
  * *International:* Royal mail airmail signed for small packet: 9.50GBP 
  
-All prices are for up to 2 kits per parcel. If you want more please ask him for a quote.
+All prices are for up to 2 kits per parcel. If you want more please ask him for a quote.<br><br>
  
 The "signed for" services are probably best if you live in an area that has problems with post disappearing.<br>
 To keep things simple I have averaged the international costs for various countries in to one price.<br>
 Other than adding 1.00GBP for a jiffy bag these are the actual postage prices Paul will be paying.<br>
 
+Click on any of the images for a larger one.<br><br>
 
 <a href="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/modulecase/00_main_module_picture.jpg">
 <img border="0" src="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/modulecase/00_main_module_picture_sml.jpg"> <a>
@@ -65,12 +66,8 @@ Other than adding 1.00GBP for a jiffy bag these are the actual postage prices Pa
 <img border="0" src="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/modulecase/16_parts_layout_for_shipping_sml.jpg"> <a>
 <a href="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/modulecase/17_standoffs_fitted_on_screws.jpg">
 <img border="0" src="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/modulecase/17_standoffs_fitted_on_screws_sml.jpg"> <a>
-<a href="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/modulecase/00_main_module_picture.jpg">
-<img border="0" src="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/modulecase/00_main_module_picture_sml.jpg"> <a>
 <a href="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/modulecase/18_standoffs.jpg">
 <img border="0" src="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/modulecase/18_standoffs_sml.jpg"> <a>
-
-
 
 
 
