@@ -1,6 +1,6 @@
 #summary A much cheaper alternative to the Spektrum module case
 
-A very nice chap, name of Paul has taken the time to develope an open source module case. 
+A very nice chap, name of Paul has taken the time to develop an open source module case. 
 
 He has granted me permission to include the files in this repository and if that wasn't enough he is also offering kits of the parts !
 
@@ -68,8 +68,6 @@ Click on any of the images for a larger one.<br><br>
 <img border="0" src="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/modulecase/17_standoffs_fitted_on_screws_sml.jpg"> <a>
 <a href="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/modulecase/18_standoffs.jpg">
 <img border="0" src="http://rc-ppm-2-spi.googlecode.com/svn/wiki/images/modulecase/18_standoffs_sml.jpg"> <a>
-
-
 
 
 
