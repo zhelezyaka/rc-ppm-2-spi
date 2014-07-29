@@ -2,6 +2,8 @@
 
 = In date order, newest first =
 
+*2014.07.29* <br><br>PCBs are back in stock.
+
 *2014.06.01* <br><br>PCBs are currently sold out. Next batch 3-4 weeks away.
 
 *2014.05.14* <br><br> New now have an open source module case alternative thanks to Paul. See here DiyModuleCase !
