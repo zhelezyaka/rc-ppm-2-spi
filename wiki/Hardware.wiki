@@ -58,6 +58,6 @@ Use the loupe to examine your joints in detail as you see fit.
 Use the solder braid to remove any solder bridges.
 
 Here are a couple of videos of myself doing some SMT soldering. They feature the Gruvin9x replacement PCB for the 9x transmitter, but the techniques are the same. As mentioned you can solder the whole ppm-2-spi board pin by pin (the pin pitch on the PCB is larger than on the Gruvin9x board), so the first video is probably more use.
+<wiki:gadget url="http://rc-ppm-2-spi.googlecode.com/svn/wiki/gcVideo.xml" up_video="https://vimeo.com/108601753" width="640" height="384"/>
 
-<wiki:video url="http://www.youtube.com/watch?v=nMZq0CZ67WY"/>
-<wiki:video url="http://www.youtube.com/watch?v=r69WvRybgCU"/>
+<wiki:gadget url="http://rc-ppm-2-spi.googlecode.com/svn/wiki/gcVideo.xml" up_video="https://vimeo.com/108526858" width="640" height="384"/>
